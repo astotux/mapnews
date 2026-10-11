@@ -9,6 +9,28 @@
     <link rel="stylesheet" href="src/css/styles.css" />
     <link rel="stylesheet" href="src/css/reset.css" />
     <script crossorigin src="https://cdn.jsdelivr.net/npm/@babel/standalone@7/babel.min.js"></script>
+    <script>
+        (function() {
+            try {
+                if (localStorage.getItem('mapnews_theme') === 'dark') {
+                    document.documentElement.classList.add('dark-theme');
+                    document.addEventListener('DOMContentLoaded', function() {
+                        if (document.body) document.body.classList.add('dark-theme');
+                    });
+                } else {
+                    document.documentElement.classList.remove('dark-theme');
+                }
+                if (localStorage.getItem('mapnews_show_weather') === 'false') {
+                    document.documentElement.classList.add('hide-map-weather');
+                    document.addEventListener('DOMContentLoaded', function() {
+                        if (document.body) document.body.classList.add('hide-map-weather');
+                    });
+                } else {
+                    document.documentElement.classList.remove('hide-map-weather');
+                }
+            } catch(e) {}
+        })();
+    </script>
 </head>
 
 <body>
@@ -84,6 +106,38 @@
                             <img src="./src/images/icons/tg.svg" class="menu__ul_li-img">
                         </div>
                         <p class="menu__ul_li-text">@astotux</p>
+                    </li>
+                </ul>
+                <li class="menu_ul_li" id="settings_menu_bar">
+                    <div class="menu__ul_li-img_container">
+                        <img src="./src/images/icons/settings.svg" class="menu__ul_li-img" id="settings_menu-img">
+                    </div>
+                    <p class="menu__ul_li-text">Настройки</p>
+                </li>
+                <ul class="menu__ul menu__ul_anoth" id="settings_menu">
+                    <li class="menu_ul_li menu_ul_li--setting" id="setting_theme_item">
+                        <div class="menu__ul_li-img_container">
+                            <img src="./src/images/icons/moon.svg" class="menu__ul_li-img">
+                        </div>
+                        <p class="menu__ul_li-text">Темная тема</p>
+                        <div class="toggle-switch-wrapper" onclick="event.stopPropagation()">
+                            <input type="checkbox" id="theme_toggle" class="toggle-switch-input">
+                            <label for="theme_toggle" class="toggle-switch-label">
+                                <span class="toggle-switch-button"></span>
+                            </label>
+                        </div>
+                    </li>
+                    <li class="menu_ul_li menu_ul_li--setting" id="setting_weather_item">
+                        <div class="menu__ul_li-img_container">
+                            <img src="./src/images/icons/weather-toggle.svg" class="menu__ul_li-img">
+                        </div>
+                        <p class="menu__ul_li-text">Погода</p>
+                        <div class="toggle-switch-wrapper" onclick="event.stopPropagation()">
+                            <input type="checkbox" id="weather_toggle" class="toggle-switch-input" checked>
+                            <label for="weather_toggle" class="toggle-switch-label">
+                                <span class="toggle-switch-button"></span>
+                            </label>
+                        </div>
                     </li>
                 </ul>
                 <li id="logout">

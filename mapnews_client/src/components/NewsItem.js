@@ -55,31 +55,15 @@ class NewsItemManager {
     }
 
     createNewsLeft(item) {
+        const sentiment = item.sentiment || 'neutral';
         return `
-            <div class="new__item-left">
+            <div class="new__item-left sentiment-glow-${sentiment}" data-sentiment="${sentiment}">
                 <img src="${item.imageUrl || './src/images/new.png'}" alt="new" class="new__item-img">
                 <div class="new__item-img-info">
-                    ${this.createSentimentBadge(item.sentiment)}
                     ${this.authManager.isLoggedIn() ? this.createLikeButton(item._id) : ''}
                     ${this.createTimeInfo(item)}
                     ${this.createCityInfo(item)}
                 </div>
-            </div>
-        `;
-    }
-
-    createSentimentBadge(sentiment) {
-        const type = sentiment || 'neutral';
-        const titleMap = {
-            'positive': 'Позитивная новость',
-            'negative': 'Негативная новость',
-            'neutral': 'Нейтральная новость'
-        };
-        const titleText = titleMap[type] || 'Нейтральная новость';
-
-        return `
-            <div class="new-sentiment-badge sentiment-${type}" title="${titleText}">
-                <div class="sentiment-dot"></div>
             </div>
         `;
     }
