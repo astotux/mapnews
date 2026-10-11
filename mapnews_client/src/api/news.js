@@ -1,7 +1,7 @@
 export const fetchNews = async (params) => {
     try {
         const queryParams = new URLSearchParams();
-        
+
         if (params.cities && params.cities.length > 0) {
             params.cities.forEach(city => queryParams.append('city', city));
         }
@@ -10,11 +10,8 @@ export const fetchNews = async (params) => {
         }
         if (params.startDate) queryParams.append('startDate', params.startDate);
         if (params.endDate) queryParams.append('endDate', params.endDate);
-<<<<<<< HEAD
         if (params.sentiment) queryParams.append('sentiment', params.sentiment);
         if (params.category) queryParams.append('category', params.category);
-=======
->>>>>>> origin/master
         if (params.page) queryParams.append('page', params.page.toString());
         if (params.limit) queryParams.append('limit', params.limit.toString());
 
@@ -28,11 +25,11 @@ export const fetchNews = async (params) => {
             mode: 'cors',
             credentials: 'omit',
         });
-        
+
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
+
         const data = await response.json();
         return data;
     } catch (error) {
@@ -57,11 +54,11 @@ export const fetchCities = async () => {
             mode: 'cors',
             credentials: 'omit',
         });
-        
+
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
+
         const cities = await response.json();
         return cities;
     } catch (error) {
@@ -81,11 +78,11 @@ export const fetchSources = async () => {
             mode: 'cors',
             credentials: 'omit',
         });
-        
+
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
+
         const sources = await response.json();
         return sources;
     } catch (error) {

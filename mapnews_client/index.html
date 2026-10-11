@@ -275,6 +275,41 @@
         window.POLYGON_STYLE_ACTIVE = POLYGON_STYLE_ACTIVE;
         window.newsManager = new NewsManager();
         let mapManager;
+        let allCities = [];
+        let defaultWeather = null;
+
+        function updateFooterWeather(weatherData, cityName = 'Сыктывкар') {
+            if (!weatherData) return;
+            const weatherEl = document.querySelector('.weather');
+            const infoEl = document.querySelector('.weather__info');
+            const imgEl = document.querySelector('.weather__img');
+
+            const tempVal = Math.round(weatherData.temp);
+            const sign = tempVal > 0 ? '+' : '';
+            if (infoEl) infoEl.textContent = `${sign}${tempVal}°`;
+            if (imgEl && (weatherData.icon || weatherData.iconDataUrl)) {
+                imgEl.src = weatherData.icon || weatherData.iconDataUrl;
+            }
+            if (weatherEl) {
+                weatherEl.title = `${cityName}: ${weatherData.description || ''}, ${sign}${tempVal}°`;
+            }
+        }
+
+        function syncFooterWeatherWithSelection() {
+            const selected = window.newsManager ? window.newsManager.selectedCities : [];
+            if (selected && selected.length === 1 && window.districtsWeatherMap) {
+                const selCityId = selected[0];
+                const selWeather = window.districtsWeatherMap[selCityId];
+                const selCity = allCities.find(c => c._id === selCityId);
+                if (selWeather) {
+                    updateFooterWeather(selWeather, selCity ? selCity.name : 'Выбранный район');
+                    return;
+                }
+            }
+            if (defaultWeather) {
+                updateFooterWeather(defaultWeather, 'Сыктывкар');
+            }
+        }
 
         if (auth.isLoggedIn()) {
             document.getElementById('logout').addEventListener('click', () => {
@@ -294,10 +329,10 @@
             });
         }
 
-        weather.fetchWeather().then(weather => {
-            document.querySelector('.weather__info').textContent = `${Math.round(weather.temp)}°`;
-            document.querySelector('.weather__img').src = weather.icon;
-        });
+        weather.fetchWeather().then(weatherData => {
+            defaultWeather = weatherData;
+            updateFooterWeather(weatherData, 'Сыктывкар');
+        }).catch(err => console.error('Ошибка загрузки погоды:', err));
 
         async function main() {
             try {
@@ -309,10 +344,21 @@
                     fetchSources()
                 ]);
 
+                allCities = cities;
+                window.citiesList = cities;
                 initializeCities(cities);
                 initializeSources(sources);
                 initializeFavoriteFilters();
                 window.initializeSliders();
+
+                // Fetch real-time weather for all districts (Open-Meteo free API)
+                weather.fetchDistrictsWeather(cities).then(weatherMap => {
+                    window.districtsWeatherMap = weatherMap;
+                    if (mapManager) {
+                        mapManager.setCitiesWeather(weatherMap);
+                    }
+                }).catch(err => console.error('Ошибка загрузки погоды районов:', err));
+
                 await window.newsManager.updateNews();
 
                 const preloader = document.getElementById('preloader');
@@ -377,6 +423,7 @@
 
                         window.newsManager.selectedCities = [];
                         if (mapManager) mapManager.updateTransform();
+                        syncFooterWeatherWithSelection();
                         await window.newsManager.resetAndFetch();
                     } else {
                         // При нажатии - активируем кнопку и выбираем только избранные районы
@@ -407,6 +454,7 @@
 
                         window.newsManager.selectedCities = [...favCityIds];
                         if (mapManager) mapManager.updateTransform();
+                        syncFooterWeatherWithSelection();
                         await window.newsManager.resetAndFetch();
                     }
                 });
@@ -474,6 +522,7 @@
 
             mapManager.updatePolygonStyle(el_id, !isActive);
             window.newsManager.updateCity(el_id, isActive);
+            syncFooterWeatherWithSelection();
         };
 
         window.handleSourceClick = (el_id) => {

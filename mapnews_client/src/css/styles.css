@@ -1106,6 +1106,49 @@ input[type="date"] {
     color: white;
 }
 
+/* Animated Weather Texture Overlay on District Polygons */
+.custom-map-weather-overlay {
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    mix-blend-mode: screen;
+}
+
+/* Temperature Degrees written directly onto the District Polygon Surface */
+.district-polygon-temp {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    font-size: 10.5px;
+    fill: #ffffff;
+    text-anchor: middle;
+    dominant-baseline: central;
+    letter-spacing: -0.2px;
+    pointer-events: auto;
+    cursor: pointer;
+    user-select: none;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.95)) drop-shadow(0 0 10px rgba(0, 0, 0, 0.75));
+    transition: fill 0.2s ease, opacity 0.2s ease, filter 0.2s ease;
+}
+
+.district-polygon-temp:hover,
+.district-polygon-temp.hover {
+    fill: #40C196 !important;
+    filter: drop-shadow(0 0 10px rgba(64, 193, 150, 0.95)) drop-shadow(0 2px 4px rgba(0, 0, 0, 1));
+}
+
+.district-polygon-temp.active {
+    fill: #ffffff !important;
+    font-weight: 800;
+    filter: drop-shadow(0 0 14px rgba(64, 193, 150, 1)) drop-shadow(0 2px 5px rgba(0, 0, 0, 1));
+}
+
+.district-polygon-temp.is-freezing {
+    fill: #93c5fd;
+}
+
+.district-polygon-temp.is-warm {
+    fill: #fcd34d;
+}
+
 
 
 /* LOGIN */
