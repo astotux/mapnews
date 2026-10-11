@@ -3,42 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Авторизация - MapNews</title>
-    <link rel="stylesheet" href="src/css/styles.css" />
-    <link rel="stylesheet" href="src/css/reset.css" />
+    <title>Регистрация - MapNews</title>
     <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="src/css/reset.css" />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <script>
+        (function() {
+            try {
+                var savedTheme = localStorage.getItem('mapnews_theme');
+                var isDark = savedTheme === 'dark' || (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                if (isDark) {
+                    document.documentElement.classList.add('dark-theme');
+                    document.addEventListener('DOMContentLoaded', function() {
+                        if (document.body) document.body.classList.add('dark-theme');
+                    });
+                } else {
+                    document.documentElement.classList.remove('dark-theme');
+                }
+            } catch (e) { }
+        })();
+
+        window.addEventListener('storage', function(e) {
+            if (e.key === 'mapnews_theme') {
+                var isDark = e.newValue === 'dark';
+                document.documentElement.classList.toggle('dark-theme', isDark);
+                if (document.body) document.body.classList.toggle('dark-theme', isDark);
+            }
+        });
+    </script>
 </head>
 <body>
     <div class="login-container">
         <div class="login-cont">
             <form class="login-form" id="loginForm">
-                <h2 style="text-align: center; margin-bottom: 2rem;">Регистрация в MapNews</h2>
+                <h2>Регистрация в MapNews</h2>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" placeholder="example@mail.ru" required autocomplete="email">
                 </div>
                 <div class="form-group">
                     <label for="name">Имя</label>
-                    <input type="text" id="name" name="name" required>
+                    <input type="text" id="name" name="name" placeholder="Ваше имя" required autocomplete="name">
                 </div>
                 <div class="form-group">
                     <label for="password">Пароль</label>
-                    <input type="password" id="password" name="password" required>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required autocomplete="new-password">
                 </div>
-                <button type="submit" class="login-btn">Регистрация</button>
+                <button type="submit" class="login-btn">Зарегистрироваться</button>
                 <div class="login-links">   
                     <a href="/" class="login-link">Продолжить без входа</a>
                     <a href="/login.html" class="login-link">Войти</a>
                 </div>
-                <div class="error-message" id="errorMessage">
-                    
-                </div>
+                <div class="error-message" id="errorMessage"></div>
             </form>
             <img src="./src/images/icons/logo.svg" alt="logo" class="logo-login">
-            
         </div>
     </div>
-
 
     <script type="module">
         import { AuthManager } from './src/api/auth.js';
@@ -70,4 +90,4 @@
         });
     </script>
 </body>
-</html> 
+</html>

@@ -1,45 +1,5 @@
 {
   "districts": {
-    "Сыктывкар": {
-      "temp": 7,
-      "formattedTemp": "+7°",
-      "code": 3,
-      "description": "Пасмурно",
-      "type": "cloudy",
-      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
-      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
-      "tempClass": "is-mild"
-    },
-    "67c5eaa1529042183e00eee5": {
-      "temp": 7,
-      "formattedTemp": "+7°",
-      "code": 3,
-      "description": "Пасмурно",
-      "type": "cloudy",
-      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
-      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
-      "tempClass": "is-mild"
-    },
-    "Ухта": {
-      "temp": 6,
-      "formattedTemp": "+6°",
-      "code": 3,
-      "description": "Пасмурно",
-      "type": "cloudy",
-      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
-      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
-      "tempClass": "is-mild"
-    },
-    "67c5eaa1529042183e00eee8": {
-      "temp": 6,
-      "formattedTemp": "+6°",
-      "code": 3,
-      "description": "Пасмурно",
-      "type": "cloudy",
-      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
-      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
-      "tempClass": "is-mild"
-    },
     "Печора": {
       "temp": 5,
       "formattedTemp": "+5°",
@@ -80,24 +40,44 @@
       "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22heavyCloud%22%20x1%3D%229%22%20y1%3D%223%22%20x2%3D%2237%22%20y2%3D%2229%22%3E%3Cstop%20stop-color%3D%22%23829AB3%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23334B67%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22heavyDrop%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%2356D5FF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%230875D1%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M7%2019a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H14a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23heavyCloud)%22%20stroke%3D%22%23526C87%22%20stroke-width%3D%221%22%2F%3E%3Cg%20fill%3D%22url(%23heavyDrop)%22%3E%3Cpath%20d%3D%22M8%2035c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3Cpath%20d%3D%22M18%2040c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3Cpath%20d%3D%22M28%2035c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3Cpath%20d%3D%22M37%2040c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E",
       "tempClass": "is-mild"
     },
-    "Вуктыл": {
-      "temp": 5,
-      "formattedTemp": "+5°",
-      "code": 61,
-      "description": "Небольшой дождь",
-      "type": "rain",
-      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"rainCloud\" x1=\"10\" y1=\"5\" x2=\"35\" y2=\"29\"><stop stop-color=\"#B9CDDF\"/><stop offset=\"1\" stop-color=\"#536E8B\"/></linearGradient><linearGradient id=\"rainDrop\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop stop-color=\"#7CE0FF\"/><stop offset=\"1\" stop-color=\"#1687E8\"/></linearGradient></defs><path d=\"M8 20a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#rainCloud)\" stroke=\"#7894AF\" stroke-width=\"1\"/><g fill=\"url(#rainDrop)\"><path d=\"M11 34c0-2 3-7 3-7s3 5 3 7a3 3 0 0 1-6 0Z\"/><path d=\"M21 39c0-2 3-7 3-7s3 5 3 7a3 3 0 0 1-6 0Z\"/><path d=\"M31 34c0-2 3-7 3-7s3 5 3 7a3 3 0 0 1-6 0Z\"/></g><path d=\"M13 32l1-2M23 37l1-2M33 32l1-2\" stroke=\"#D7F5FF\" stroke-width=\"1.2\" stroke-linecap=\"round\"/></svg>",
-      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22rainCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2235%22%20y2%3D%2229%22%3E%3Cstop%20stop-color%3D%22%23B9CDDF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23536E8B%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22rainDrop%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%237CE0FF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%231687E8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2020a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23rainCloud)%22%20stroke%3D%22%237894AF%22%20stroke-width%3D%221%22%2F%3E%3Cg%20fill%3D%22url(%23rainDrop)%22%3E%3Cpath%20d%3D%22M11%2034c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3Cpath%20d%3D%22M21%2039c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3Cpath%20d%3D%22M31%2034c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M13%2032l1-2M23%2037l1-2M33%2032l1-2%22%20stroke%3D%22%23D7F5FF%22%20stroke-width%3D%221.2%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E",
+    "Сыктывкар": {
+      "temp": 7,
+      "formattedTemp": "+7°",
+      "code": 3,
+      "description": "Пасмурно",
+      "type": "cloudy",
+      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
+      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
       "tempClass": "is-mild"
     },
-    "67c5eaa2529042183e00eeff": {
-      "temp": 5,
-      "formattedTemp": "+5°",
-      "code": 61,
-      "description": "Небольшой дождь",
-      "type": "rain",
-      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"rainCloud\" x1=\"10\" y1=\"5\" x2=\"35\" y2=\"29\"><stop stop-color=\"#B9CDDF\"/><stop offset=\"1\" stop-color=\"#536E8B\"/></linearGradient><linearGradient id=\"rainDrop\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop stop-color=\"#7CE0FF\"/><stop offset=\"1\" stop-color=\"#1687E8\"/></linearGradient></defs><path d=\"M8 20a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#rainCloud)\" stroke=\"#7894AF\" stroke-width=\"1\"/><g fill=\"url(#rainDrop)\"><path d=\"M11 34c0-2 3-7 3-7s3 5 3 7a3 3 0 0 1-6 0Z\"/><path d=\"M21 39c0-2 3-7 3-7s3 5 3 7a3 3 0 0 1-6 0Z\"/><path d=\"M31 34c0-2 3-7 3-7s3 5 3 7a3 3 0 0 1-6 0Z\"/></g><path d=\"M13 32l1-2M23 37l1-2M33 32l1-2\" stroke=\"#D7F5FF\" stroke-width=\"1.2\" stroke-linecap=\"round\"/></svg>",
-      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22rainCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2235%22%20y2%3D%2229%22%3E%3Cstop%20stop-color%3D%22%23B9CDDF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23536E8B%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22rainDrop%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%237CE0FF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%231687E8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2020a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23rainCloud)%22%20stroke%3D%22%237894AF%22%20stroke-width%3D%221%22%2F%3E%3Cg%20fill%3D%22url(%23rainDrop)%22%3E%3Cpath%20d%3D%22M11%2034c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3Cpath%20d%3D%22M21%2039c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3Cpath%20d%3D%22M31%2034c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M13%2032l1-2M23%2037l1-2M33%2032l1-2%22%20stroke%3D%22%23D7F5FF%22%20stroke-width%3D%221.2%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E",
+    "67c5eaa1529042183e00eee5": {
+      "temp": 7,
+      "formattedTemp": "+7°",
+      "code": 3,
+      "description": "Пасмурно",
+      "type": "cloudy",
+      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
+      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
+      "tempClass": "is-mild"
+    },
+    "Ухта": {
+      "temp": 6,
+      "formattedTemp": "+6°",
+      "code": 3,
+      "description": "Пасмурно",
+      "type": "cloudy",
+      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
+      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
+      "tempClass": "is-mild"
+    },
+    "67c5eaa1529042183e00eee8": {
+      "temp": 6,
+      "formattedTemp": "+6°",
+      "code": 3,
+      "description": "Пасмурно",
+      "type": "cloudy",
+      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
+      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
       "tempClass": "is-mild"
     },
     "Усинск": {
@@ -111,26 +91,6 @@
       "tempClass": "is-mild"
     },
     "67c5eaa2529042183e00eeed": {
-      "temp": 5,
-      "formattedTemp": "+5°",
-      "code": 3,
-      "description": "Пасмурно",
-      "type": "cloudy",
-      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
-      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
-      "tempClass": "is-mild"
-    },
-    "Инта": {
-      "temp": 5,
-      "formattedTemp": "+5°",
-      "code": 3,
-      "description": "Пасмурно",
-      "type": "cloudy",
-      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
-      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
-      "tempClass": "is-mild"
-    },
-    "67c5eaa2529042183e00eef1": {
       "temp": 5,
       "formattedTemp": "+5°",
       "code": 3,
@@ -160,9 +120,29 @@
       "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
       "tempClass": "is-mild"
     },
-    "Сыктывдинский": {
-      "temp": 6,
-      "formattedTemp": "+6°",
+    "Вуктыл": {
+      "temp": 5,
+      "formattedTemp": "+5°",
+      "code": 61,
+      "description": "Небольшой дождь",
+      "type": "rain",
+      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"rainCloud\" x1=\"10\" y1=\"5\" x2=\"35\" y2=\"29\"><stop stop-color=\"#B9CDDF\"/><stop offset=\"1\" stop-color=\"#536E8B\"/></linearGradient><linearGradient id=\"rainDrop\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop stop-color=\"#7CE0FF\"/><stop offset=\"1\" stop-color=\"#1687E8\"/></linearGradient></defs><path d=\"M8 20a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#rainCloud)\" stroke=\"#7894AF\" stroke-width=\"1\"/><g fill=\"url(#rainDrop)\"><path d=\"M11 34c0-2 3-7 3-7s3 5 3 7a3 3 0 0 1-6 0Z\"/><path d=\"M21 39c0-2 3-7 3-7s3 5 3 7a3 3 0 0 1-6 0Z\"/><path d=\"M31 34c0-2 3-7 3-7s3 5 3 7a3 3 0 0 1-6 0Z\"/></g><path d=\"M13 32l1-2M23 37l1-2M33 32l1-2\" stroke=\"#D7F5FF\" stroke-width=\"1.2\" stroke-linecap=\"round\"/></svg>",
+      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22rainCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2235%22%20y2%3D%2229%22%3E%3Cstop%20stop-color%3D%22%23B9CDDF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23536E8B%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22rainDrop%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%237CE0FF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%231687E8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2020a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23rainCloud)%22%20stroke%3D%22%237894AF%22%20stroke-width%3D%221%22%2F%3E%3Cg%20fill%3D%22url(%23rainDrop)%22%3E%3Cpath%20d%3D%22M11%2034c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3Cpath%20d%3D%22M21%2039c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3Cpath%20d%3D%22M31%2034c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M13%2032l1-2M23%2037l1-2M33%2032l1-2%22%20stroke%3D%22%23D7F5FF%22%20stroke-width%3D%221.2%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E",
+      "tempClass": "is-mild"
+    },
+    "67c5eaa2529042183e00eeff": {
+      "temp": 5,
+      "formattedTemp": "+5°",
+      "code": 61,
+      "description": "Небольшой дождь",
+      "type": "rain",
+      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"rainCloud\" x1=\"10\" y1=\"5\" x2=\"35\" y2=\"29\"><stop stop-color=\"#B9CDDF\"/><stop offset=\"1\" stop-color=\"#536E8B\"/></linearGradient><linearGradient id=\"rainDrop\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\"><stop stop-color=\"#7CE0FF\"/><stop offset=\"1\" stop-color=\"#1687E8\"/></linearGradient></defs><path d=\"M8 20a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#rainCloud)\" stroke=\"#7894AF\" stroke-width=\"1\"/><g fill=\"url(#rainDrop)\"><path d=\"M11 34c0-2 3-7 3-7s3 5 3 7a3 3 0 0 1-6 0Z\"/><path d=\"M21 39c0-2 3-7 3-7s3 5 3 7a3 3 0 0 1-6 0Z\"/><path d=\"M31 34c0-2 3-7 3-7s3 5 3 7a3 3 0 0 1-6 0Z\"/></g><path d=\"M13 32l1-2M23 37l1-2M33 32l1-2\" stroke=\"#D7F5FF\" stroke-width=\"1.2\" stroke-linecap=\"round\"/></svg>",
+      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22rainCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2235%22%20y2%3D%2229%22%3E%3Cstop%20stop-color%3D%22%23B9CDDF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23536E8B%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22rainDrop%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%237CE0FF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%231687E8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2020a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23rainCloud)%22%20stroke%3D%22%237894AF%22%20stroke-width%3D%221%22%2F%3E%3Cg%20fill%3D%22url(%23rainDrop)%22%3E%3Cpath%20d%3D%22M11%2034c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3Cpath%20d%3D%22M21%2039c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3Cpath%20d%3D%22M31%2034c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M13%2032l1-2M23%2037l1-2M33%2032l1-2%22%20stroke%3D%22%23D7F5FF%22%20stroke-width%3D%221.2%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E",
+      "tempClass": "is-mild"
+    },
+    "Инта": {
+      "temp": 5,
+      "formattedTemp": "+5°",
       "code": 3,
       "description": "Пасмурно",
       "type": "cloudy",
@@ -170,14 +150,34 @@
       "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
       "tempClass": "is-mild"
     },
-    "67c5eaa2529042183e00ef02": {
-      "temp": 6,
-      "formattedTemp": "+6°",
+    "67c5eaa2529042183e00eef1": {
+      "temp": 5,
+      "formattedTemp": "+5°",
       "code": 3,
       "description": "Пасмурно",
       "type": "cloudy",
       "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
       "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
+      "tempClass": "is-mild"
+    },
+    "Удорский": {
+      "temp": 5,
+      "formattedTemp": "+5°",
+      "code": 2,
+      "description": "Переменная облачность",
+      "type": "partly-cloudy",
+      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"sunPart\" x1=\"18\" y1=\"5\" x2=\"31\" y2=\"24\"><stop stop-color=\"#FFE98A\"/><stop offset=\"1\" stop-color=\"#FFAA24\"/></linearGradient><linearGradient id=\"cloudPart\" x1=\"14\" y1=\"22\" x2=\"35\" y2=\"40\"><stop stop-color=\"#FFFFFF\"/><stop offset=\"1\" stop-color=\"#B9D1E8\"/></linearGradient></defs><g stroke=\"#FFB52E\" stroke-width=\"2.2\" stroke-linecap=\"round\"><path d=\"M25 5v3M39 19h3M35 9l-2 2M16 10l2 2\"/></g><circle cx=\"27\" cy=\"17\" r=\"10\" fill=\"url(#sunPart)\"/><path d=\"M13 37h23a8 8 0 0 0 0-16 11 11 0 0 0-21-2 9 9 0 0 0-2 18Z\" fill=\"url(#cloudPart)\" stroke=\"#D5E4F1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M18 25c2-3 5-4 8-4\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
+      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22sunPart%22%20x1%3D%2218%22%20y1%3D%225%22%20x2%3D%2231%22%20y2%3D%2224%22%3E%3Cstop%20stop-color%3D%22%23FFE98A%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23FFAA24%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22cloudPart%22%20x1%3D%2214%22%20y1%3D%2222%22%20x2%3D%2235%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23FFFFFF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23B9D1E8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20stroke%3D%22%23FFB52E%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M25%205v3M39%2019h3M35%209l-2%202M16%2010l2%202%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%2227%22%20cy%3D%2217%22%20r%3D%2210%22%20fill%3D%22url(%23sunPart)%22%2F%3E%3Cpath%20d%3D%22M13%2037h23a8%208%200%200%200%200-16%2011%2011%200%200%200-21-2%209%209%200%200%200-2%2018Z%22%20fill%3D%22url(%23cloudPart)%22%20stroke%3D%22%23D5E4F1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M18%2025c2-3%205-4%208-4%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
+      "tempClass": "is-mild"
+    },
+    "67c5eaa3529042183e00ef0b": {
+      "temp": 5,
+      "formattedTemp": "+5°",
+      "code": 2,
+      "description": "Переменная облачность",
+      "type": "partly-cloudy",
+      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"sunPart\" x1=\"18\" y1=\"5\" x2=\"31\" y2=\"24\"><stop stop-color=\"#FFE98A\"/><stop offset=\"1\" stop-color=\"#FFAA24\"/></linearGradient><linearGradient id=\"cloudPart\" x1=\"14\" y1=\"22\" x2=\"35\" y2=\"40\"><stop stop-color=\"#FFFFFF\"/><stop offset=\"1\" stop-color=\"#B9D1E8\"/></linearGradient></defs><g stroke=\"#FFB52E\" stroke-width=\"2.2\" stroke-linecap=\"round\"><path d=\"M25 5v3M39 19h3M35 9l-2 2M16 10l2 2\"/></g><circle cx=\"27\" cy=\"17\" r=\"10\" fill=\"url(#sunPart)\"/><path d=\"M13 37h23a8 8 0 0 0 0-16 11 11 0 0 0-21-2 9 9 0 0 0-2 18Z\" fill=\"url(#cloudPart)\" stroke=\"#D5E4F1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M18 25c2-3 5-4 8-4\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
+      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22sunPart%22%20x1%3D%2218%22%20y1%3D%225%22%20x2%3D%2231%22%20y2%3D%2224%22%3E%3Cstop%20stop-color%3D%22%23FFE98A%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23FFAA24%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22cloudPart%22%20x1%3D%2214%22%20y1%3D%2222%22%20x2%3D%2235%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23FFFFFF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23B9D1E8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20stroke%3D%22%23FFB52E%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M25%205v3M39%2019h3M35%209l-2%202M16%2010l2%202%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%2227%22%20cy%3D%2217%22%20r%3D%2210%22%20fill%3D%22url(%23sunPart)%22%2F%3E%3Cpath%20d%3D%22M13%2037h23a8%208%200%200%200%200-16%2011%2011%200%200%200-21-2%209%209%200%200%200-2%2018Z%22%20fill%3D%22url(%23cloudPart)%22%20stroke%3D%22%23D5E4F1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M18%2025c2-3%205-4%208-4%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
       "tempClass": "is-mild"
     },
     "Прилузский": {
@@ -200,24 +200,24 @@
       "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22rainCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2235%22%20y2%3D%2229%22%3E%3Cstop%20stop-color%3D%22%23B9CDDF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23536E8B%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22rainDrop%22%20x1%3D%220%22%20y1%3D%220%22%20x2%3D%221%22%20y2%3D%221%22%3E%3Cstop%20stop-color%3D%22%237CE0FF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%231687E8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2020a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23rainCloud)%22%20stroke%3D%22%237894AF%22%20stroke-width%3D%221%22%2F%3E%3Cg%20fill%3D%22url(%23rainDrop)%22%3E%3Cpath%20d%3D%22M11%2034c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3Cpath%20d%3D%22M21%2039c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3Cpath%20d%3D%22M31%2034c0-2%203-7%203-7s3%205%203%207a3%203%200%200%201-6%200Z%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M13%2032l1-2M23%2037l1-2M33%2032l1-2%22%20stroke%3D%22%23D7F5FF%22%20stroke-width%3D%221.2%22%20stroke-linecap%3D%22round%22%2F%3E%3C%2Fsvg%3E",
       "tempClass": "is-mild"
     },
-    "Удорский": {
-      "temp": 5,
-      "formattedTemp": "+5°",
-      "code": 2,
-      "description": "Переменная облачность",
-      "type": "partly-cloudy",
-      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"sunPart\" x1=\"18\" y1=\"5\" x2=\"31\" y2=\"24\"><stop stop-color=\"#FFE98A\"/><stop offset=\"1\" stop-color=\"#FFAA24\"/></linearGradient><linearGradient id=\"cloudPart\" x1=\"14\" y1=\"22\" x2=\"35\" y2=\"40\"><stop stop-color=\"#FFFFFF\"/><stop offset=\"1\" stop-color=\"#B9D1E8\"/></linearGradient></defs><g stroke=\"#FFB52E\" stroke-width=\"2.2\" stroke-linecap=\"round\"><path d=\"M25 5v3M39 19h3M35 9l-2 2M16 10l2 2\"/></g><circle cx=\"27\" cy=\"17\" r=\"10\" fill=\"url(#sunPart)\"/><path d=\"M13 37h23a8 8 0 0 0 0-16 11 11 0 0 0-21-2 9 9 0 0 0-2 18Z\" fill=\"url(#cloudPart)\" stroke=\"#D5E4F1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M18 25c2-3 5-4 8-4\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
-      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22sunPart%22%20x1%3D%2218%22%20y1%3D%225%22%20x2%3D%2231%22%20y2%3D%2224%22%3E%3Cstop%20stop-color%3D%22%23FFE98A%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23FFAA24%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22cloudPart%22%20x1%3D%2214%22%20y1%3D%2222%22%20x2%3D%2235%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23FFFFFF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23B9D1E8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20stroke%3D%22%23FFB52E%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M25%205v3M39%2019h3M35%209l-2%202M16%2010l2%202%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%2227%22%20cy%3D%2217%22%20r%3D%2210%22%20fill%3D%22url(%23sunPart)%22%2F%3E%3Cpath%20d%3D%22M13%2037h23a8%208%200%200%200%200-16%2011%2011%200%200%200-21-2%209%209%200%200%200-2%2018Z%22%20fill%3D%22url(%23cloudPart)%22%20stroke%3D%22%23D5E4F1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M18%2025c2-3%205-4%208-4%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
+    "Сыктывдинский": {
+      "temp": 6,
+      "formattedTemp": "+6°",
+      "code": 3,
+      "description": "Пасмурно",
+      "type": "cloudy",
+      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
+      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
       "tempClass": "is-mild"
     },
-    "67c5eaa3529042183e00ef0b": {
-      "temp": 5,
-      "formattedTemp": "+5°",
-      "code": 2,
-      "description": "Переменная облачность",
-      "type": "partly-cloudy",
-      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"sunPart\" x1=\"18\" y1=\"5\" x2=\"31\" y2=\"24\"><stop stop-color=\"#FFE98A\"/><stop offset=\"1\" stop-color=\"#FFAA24\"/></linearGradient><linearGradient id=\"cloudPart\" x1=\"14\" y1=\"22\" x2=\"35\" y2=\"40\"><stop stop-color=\"#FFFFFF\"/><stop offset=\"1\" stop-color=\"#B9D1E8\"/></linearGradient></defs><g stroke=\"#FFB52E\" stroke-width=\"2.2\" stroke-linecap=\"round\"><path d=\"M25 5v3M39 19h3M35 9l-2 2M16 10l2 2\"/></g><circle cx=\"27\" cy=\"17\" r=\"10\" fill=\"url(#sunPart)\"/><path d=\"M13 37h23a8 8 0 0 0 0-16 11 11 0 0 0-21-2 9 9 0 0 0-2 18Z\" fill=\"url(#cloudPart)\" stroke=\"#D5E4F1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M18 25c2-3 5-4 8-4\" stroke=\"white\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
-      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22sunPart%22%20x1%3D%2218%22%20y1%3D%225%22%20x2%3D%2231%22%20y2%3D%2224%22%3E%3Cstop%20stop-color%3D%22%23FFE98A%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23FFAA24%22%2F%3E%3C%2FlinearGradient%3E%3ClinearGradient%20id%3D%22cloudPart%22%20x1%3D%2214%22%20y1%3D%2222%22%20x2%3D%2235%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23FFFFFF%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23B9D1E8%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cg%20stroke%3D%22%23FFB52E%22%20stroke-width%3D%222.2%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M25%205v3M39%2019h3M35%209l-2%202M16%2010l2%202%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%2227%22%20cy%3D%2217%22%20r%3D%2210%22%20fill%3D%22url(%23sunPart)%22%2F%3E%3Cpath%20d%3D%22M13%2037h23a8%208%200%200%200%200-16%2011%2011%200%200%200-21-2%209%209%200%200%200-2%2018Z%22%20fill%3D%22url(%23cloudPart)%22%20stroke%3D%22%23D5E4F1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M18%2025c2-3%205-4%208-4%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
+    "67c5eaa2529042183e00ef02": {
+      "temp": 6,
+      "formattedTemp": "+6°",
+      "code": 3,
+      "description": "Пасмурно",
+      "type": "cloudy",
+      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
+      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
       "tempClass": "is-mild"
     },
     "Койгородский": {
@@ -260,7 +260,7 @@
       "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
       "tempClass": "is-mild"
     },
-    "Корткеросский": {
+    "Усть-Вымский": {
       "temp": 7,
       "formattedTemp": "+7°",
       "code": 3,
@@ -270,7 +270,7 @@
       "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
       "tempClass": "is-mild"
     },
-    "67c5eaa3529042183e00ef11": {
+    "67c5eaa3529042183e00ef17": {
       "temp": 7,
       "formattedTemp": "+7°",
       "code": 3,
@@ -300,7 +300,7 @@
       "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
       "tempClass": "is-mild"
     },
-    "Усть-Вымский": {
+    "Корткеросский": {
       "temp": 7,
       "formattedTemp": "+7°",
       "code": 3,
@@ -310,7 +310,27 @@
       "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
       "tempClass": "is-mild"
     },
-    "67c5eaa3529042183e00ef17": {
+    "67c5eaa3529042183e00ef11": {
+      "temp": 7,
+      "formattedTemp": "+7°",
+      "code": 3,
+      "description": "Пасмурно",
+      "type": "cloudy",
+      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
+      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
+      "tempClass": "is-mild"
+    },
+    "Троицко-Печорский": {
+      "temp": 7,
+      "formattedTemp": "+7°",
+      "code": 3,
+      "description": "Пасмурно",
+      "type": "cloudy",
+      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
+      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
+      "tempClass": "is-mild"
+    },
+    "67c5eaa3529042183e00ef1a": {
       "temp": 7,
       "formattedTemp": "+7°",
       "code": 3,
@@ -340,46 +360,6 @@
       "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3CradialGradient%20id%3D%22sunGrad%22%20cx%3D%220%22%20cy%3D%220%22%20r%3D%221%22%20gradientTransform%3D%22translate(24%2024)%20rotate(90)%20scale(15)%22%3E%3Cstop%20stop-color%3D%22%23FFF7AD%22%2F%3E%3Cstop%20offset%3D%220.55%22%20stop-color%3D%22%23FFC94A%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%23FF9F1C%22%2F%3E%3C%2FradialGradient%3E%3C%2Fdefs%3E%3Cg%20stroke%3D%22%23FFB52E%22%20stroke-width%3D%222.5%22%20stroke-linecap%3D%22round%22%3E%3Cpath%20d%3D%22M24%204v4M24%2040v4M4%2024h4M40%2024h4%22%2F%3E%3Cpath%20d%3D%22M9.86%209.86l2.83%202.83M35.31%2035.31l2.83%202.83M38.14%209.86l-2.83%202.83M12.69%2035.31l-2.83%202.83%22%2F%3E%3C%2Fg%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2224%22%20r%3D%2211%22%20fill%3D%22url(%23sunGrad)%22%2F%3E%3Ccircle%20cx%3D%2220.5%22%20cy%3D%2219.5%22%20r%3D%223%22%20fill%3D%22%23FFF9D6%22%20opacity%3D%22.65%22%2F%3E%3C%2Fsvg%3E",
       "tempClass": "is-mild"
     },
-    "Сысольский": {
-      "temp": 6,
-      "formattedTemp": "+6°",
-      "code": 3,
-      "description": "Пасмурно",
-      "type": "cloudy",
-      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
-      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
-      "tempClass": "is-mild"
-    },
-    "67c5eaa3529042183e00ef20": {
-      "temp": 6,
-      "formattedTemp": "+6°",
-      "code": 3,
-      "description": "Пасмурно",
-      "type": "cloudy",
-      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
-      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
-      "tempClass": "is-mild"
-    },
-    "Троицко-Печорский": {
-      "temp": 7,
-      "formattedTemp": "+7°",
-      "code": 3,
-      "description": "Пасмурно",
-      "type": "cloudy",
-      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
-      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
-      "tempClass": "is-mild"
-    },
-    "67c5eaa3529042183e00ef1a": {
-      "temp": 7,
-      "formattedTemp": "+7°",
-      "code": 3,
-      "description": "Пасмурно",
-      "type": "cloudy",
-      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
-      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
-      "tempClass": "is-mild"
-    },
     "Ижемский": {
       "temp": 6,
       "formattedTemp": "+6°",
@@ -391,6 +371,26 @@
       "tempClass": "is-mild"
     },
     "67c5eaa4529042183e00ef23": {
+      "temp": 6,
+      "formattedTemp": "+6°",
+      "code": 3,
+      "description": "Пасмурно",
+      "type": "cloudy",
+      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
+      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
+      "tempClass": "is-mild"
+    },
+    "Сысольский": {
+      "temp": 6,
+      "formattedTemp": "+6°",
+      "code": 3,
+      "description": "Пасмурно",
+      "type": "cloudy",
+      "iconSvg": "<svg viewBox=\"0 0 48 48\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><defs><linearGradient id=\"defaultCloud\" x1=\"10\" y1=\"5\" x2=\"36\" y2=\"40\"><stop stop-color=\"#DCEAF7\"/><stop offset=\".55\" stop-color=\"#A9C0D7\"/><stop offset=\"1\" stop-color=\"#7893AF\"/></linearGradient></defs><path d=\"M8 29a8 8 0 0 1 8-8 11 11 0 0 1 21 4 7 7 0 0 1-1 14H15a8 8 0 0 1-7-10Z\" fill=\"url(#defaultCloud)\" stroke=\"#91A9C1\" stroke-width=\"1.2\" stroke-linejoin=\"round\"/><path d=\"M16 27c3-3 7-4 11-3\" stroke=\"#F8FBFF\" stroke-width=\"2\" stroke-linecap=\"round\" opacity=\".9\"/></svg>",
+      "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
+      "tempClass": "is-mild"
+    },
+    "67c5eaa3529042183e00ef20": {
       "temp": 6,
       "formattedTemp": "+6°",
       "code": 3,
@@ -411,5 +411,5 @@
     "iconDataUrl": "data:image/svg+xml;charset=utf-8,%3Csvg%20viewBox%3D%220%200%2048%2048%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cdefs%3E%3ClinearGradient%20id%3D%22defaultCloud%22%20x1%3D%2210%22%20y1%3D%225%22%20x2%3D%2236%22%20y2%3D%2240%22%3E%3Cstop%20stop-color%3D%22%23DCEAF7%22%2F%3E%3Cstop%20offset%3D%22.55%22%20stop-color%3D%22%23A9C0D7%22%2F%3E%3Cstop%20offset%3D%221%22%20stop-color%3D%22%237893AF%22%2F%3E%3C%2FlinearGradient%3E%3C%2Fdefs%3E%3Cpath%20d%3D%22M8%2029a8%208%200%200%201%208-8%2011%2011%200%200%201%2021%204%207%207%200%200%201-1%2014H15a8%208%200%200%201-7-10Z%22%20fill%3D%22url(%23defaultCloud)%22%20stroke%3D%22%2391A9C1%22%20stroke-width%3D%221.2%22%20stroke-linejoin%3D%22round%22%2F%3E%3Cpath%20d%3D%22M16%2027c3-3%207-4%2011-3%22%20stroke%3D%22%23F8FBFF%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20opacity%3D%22.9%22%2F%3E%3C%2Fsvg%3E",
     "tempClass": "is-mild"
   },
-  "lastUpdated": "2026-10-11T14:02:06.597Z"
+  "lastUpdated": "2026-10-11T14:12:06.104Z"
 }
