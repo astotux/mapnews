@@ -2488,6 +2488,7 @@ body.dark-theme .custom-map-container {
             opacity: 0;
             transform: translateY(-6px);
         }
+
         to {
             opacity: 1;
             transform: translateY(0);
@@ -3037,4 +3038,195 @@ body.dark-theme .custom-map-container {
     .district-polygon-temp {
         font-size: 3px !important;
     }
+}
+
+.rate-limit-toast {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translate(-50%, -28px) scale(0.94);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 99999;
+    width: calc(100vw - 32px);
+    max-width: 440px;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 20px;
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.18), 0 0 0 1px rgba(245, 158, 11, 0.28);
+    overflow: hidden;
+    transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.28s ease;
+    font-family: "Montserrat", sans-serif;
+    color: #1e293b;
+    box-sizing: border-box;
+}
+
+.rate-limit-toast.active {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.rate-limit-toast.closing {
+    transform: translate(-50%, -24px) scale(0.96);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.rate-limit-toast__content {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px 16px 14px 16px;
+    position: relative;
+}
+
+.rate-limit-toast__icon-wrap {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: #f59e0b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #ffffff;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.rate-limit-toast.success .rate-limit-toast__icon-wrap {
+    background: #059669;
+}
+
+.rate-limit-toast__icon {
+    width: 20px;
+    height: 20px;
+}
+
+.rate-limit-toast__text-wrap {
+    flex: 1;
+    min-width: 0;
+}
+
+.rate-limit-toast__title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.25;
+    margin-bottom: 4px;
+}
+
+.rate-limit-toast__message {
+    font-size: 13px;
+    line-height: 1.35;
+    color: #475569;
+    margin-bottom: 8px;
+    word-break: break-word;
+}
+
+.rate-limit-toast__timer-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #d97706;
+    background: rgba(245, 158, 11, 0.12);
+    padding: 3px 9px;
+    border-radius: 8px;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.rate-limit-toast.success .rate-limit-toast__timer-badge {
+    color: #059669;
+    background: rgba(16, 185, 129, 0.14);
+}
+
+.rate-limit-toast__seconds {
+    font-weight: 800;
+}
+
+.rate-limit-toast__close {
+    background: none;
+    border: none;
+    padding: 4px;
+    margin-top: -2px;
+    margin-right: -4px;
+    cursor: pointer;
+    color: #94a3b8;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.rate-limit-toast__close:hover {
+    color: #334155;
+    background-color: rgba(0, 0, 0, 0.06);
+}
+
+.rate-limit-toast__progress-track {
+    width: 100%;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.rate-limit-toast__progress-bar {
+    height: 100%;
+    width: 100%;
+    background: #f59e0b;
+    border-radius: 2px;
+}
+
+.rate-limit-toast.success .rate-limit-toast__progress-bar {
+    background: #059669;
+    width: 100% !important;
+}
+
+/* Dark Theme Overrides */
+body.dark-theme .rate-limit-toast,
+html.dark-theme .rate-limit-toast {
+    background: rgba(20, 26, 38, 0.95);
+    color: #f1f5f9;
+}
+
+body.dark-theme .rate-limit-toast__title,
+html.dark-theme .rate-limit-toast__title {
+    color: #f8fafc;
+}
+
+body.dark-theme .rate-limit-toast__message,
+html.dark-theme .rate-limit-toast__message {
+    color: #94a3b8;
+}
+
+body.dark-theme .rate-limit-toast__timer-badge,
+html.dark-theme .rate-limit-toast__timer-badge {
+    color: #fbbf24;
+    background: rgba(245, 158, 11, 0.2);
+}
+
+body.dark-theme .rate-limit-toast.success .rate-limit-toast__timer-badge,
+html.dark-theme .rate-limit-toast.success .rate-limit-toast__timer-badge {
+    color: #34d399;
+    background: rgba(16, 185, 129, 0.2);
+}
+
+body.dark-theme .rate-limit-toast__close,
+html.dark-theme .rate-limit-toast__close {
+    color: #64748b;
+}
+
+body.dark-theme .rate-limit-toast__close:hover,
+html.dark-theme .rate-limit-toast__close:hover {
+    color: #f1f5f9;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .rate-limit-toast__progress-track,
+html.dark-theme .rate-limit-toast__progress-track {
+    background: rgba(255, 255, 255, 0.06);
 }

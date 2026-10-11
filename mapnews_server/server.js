@@ -17,6 +17,7 @@ const citiesRoutes = require('./routes/cities');
 const sourcesRoutes = require('./routes/source');
 const weatherRoutes = require('./routes/weather');
 const weatherService = require('./services/weatherService');
+const { apiRateLimiter, authRateLimiter } = require('./middleware/rateLimiter');
 
 const app = express();
 
@@ -47,6 +48,11 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/images', express.static(path.join(__dirname, 'images')));
+
+// Rate Limiting: protect all API endpoints from rapid request spam
+app.use('/api/auth', authRateLimiter);
+app.use('/api', apiRateLimiter);
+
 app.use('/api/favorites', favoritesRoutes);
 app.use('/api/auth', authRoutes);
 app.use('/api/news', newsRoutes);
