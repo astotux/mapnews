@@ -2,7 +2,7 @@ const dns = require('dns');
 try {
     dns.setDefaultResultOrder('ipv4first');
     dns.setServers(['8.8.8.8', '1.1.1.1']);
-} catch (e) {}
+} catch (e) { }
 
 const express = require('express');
 const axios = require('axios');
@@ -91,7 +91,6 @@ async function parseNewsKI() {
 
         for (const element of elements) {
             const $element = $(element);
-
             if ($element.hasClass('dateHeader')) {
                 const dateText = $element.text().trim();
                 const rawDate = dateText.split(',')[0];
@@ -206,7 +205,6 @@ async function parseNewsAIF() {
             const text = $(element).find('.text_box span:not(.item_text__title, .text_box__date)').text().trim();
             const imageUrl = $(element).find('.img_box img').attr('src') || '';
             const newsUrl = $(element).find('.text_box .box_info a').attr('href');
-
             const now = new Date();
             const [hours, minutes] = time.split(':').map(Number);
             const dateTime = new Date(
@@ -250,19 +248,16 @@ async function parseNewsKomiOnline() {
         $('.row:not(.adv-row, .page-pagination) .news-block').each(async (_, element) => {
             const dateTimeStr = $(element).find('.news-stat').text().trim();
             const parts = dateTimeStr.split('|');
-
             if (!parts[1]) {
                 return false;
             }
 
             const dateTimeParts = parts[1].trim().split(', ');
             const [day, month, year, time] = dateTimeParts[1].split(' ').concat(dateTimeParts[2], dateTimeParts[3]);
-
             const [hours, minutes] = time.split(':').map(Number);
             const [dayNum, monthStr] = [day, month];
             const monthNum = getMonthNumber(monthStr);
             const yearNum = parseInt(year);
-
             const dateTime = new Date(yearNum, monthNum - 1, parseInt(dayNum), hours, minutes);
 
             const newsBlock = $(element).find('.news-item');

@@ -10,8 +10,11 @@ export const fetchNews = async (params) => {
         }
         if (params.startDate) queryParams.append('startDate', params.startDate);
         if (params.endDate) queryParams.append('endDate', params.endDate);
+<<<<<<< HEAD
         if (params.sentiment) queryParams.append('sentiment', params.sentiment);
         if (params.category) queryParams.append('category', params.category);
+=======
+>>>>>>> origin/master
         if (params.page) queryParams.append('page', params.page.toString());
         if (params.limit) queryParams.append('limit', params.limit.toString());
 

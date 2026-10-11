@@ -9,7 +9,7 @@ export class NewsManager {
         this.selectedSources = [];
         this.isLoading = false;
         this.hasMore = true;
-        
+
         this.initializeListeners();
         this.setupInfiniteScroll();
     }

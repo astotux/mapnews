@@ -273,7 +273,6 @@
         const weather = new WeatherManager();
         window.POLYGON_STYLE = POLYGON_STYLE;
         window.POLYGON_STYLE_ACTIVE = POLYGON_STYLE_ACTIVE;
-
         window.newsManager = new NewsManager();
         let mapManager;
 
@@ -318,7 +317,6 @@
 
                 const preloader = document.getElementById('preloader');
                 preloader.classList.add('hidden');
-
                 setTimeout(() => {
                     preloader.remove();
                 }, 500);
@@ -490,7 +488,6 @@
             sourceElement.classList.toggle('active');
             window.newsManager.updateSource(el_id, isActive);
         };
-
         main().catch(console.error);
 
         async function updateUserInterface() {

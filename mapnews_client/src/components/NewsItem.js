@@ -166,7 +166,6 @@ class NewsItemManager {
 
     initializeLikeHandlers() {
         document.querySelector('.news_container').removeEventListener('click', this.handleLikeClick);
-
         document.querySelector('.news_container').addEventListener('click', this.handleLikeClick.bind(this));
     }
 

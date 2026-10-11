@@ -11,7 +11,7 @@ const newsController = {
 
             if (city) {
                 const cityIds = Array.isArray(city) ? city : city.split(',');
-                
+
                 const cities = await City.find({ _id: { $in: cityIds } });
                 if (cities.length !== cityIds.length) {
                     return res.status(404).json({ message: 'Один или несколько городов не найдены' });
@@ -21,7 +21,7 @@ const newsController = {
 
             if (source) {
                 const sourceIds = Array.isArray(source) ? source : source.split(',');
-                
+
                 const sources = await Source.find({ _id: { $in: sourceIds } });
                 if (sources.length !== sourceIds.length) {
                     return res.status(404).json({ message: 'Один или несколько источников не найдены' });
