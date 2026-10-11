@@ -42,7 +42,7 @@
         </div>
     </div>
 
-    <header class="header" style="z-index: 2;">
+    <header class="header">
         <a class="header__user" id="userSection">
             <img src="./src/images/icons/user.svg" class="header__user-img">
             <p class="header__user-name" id="userName">
@@ -375,13 +375,174 @@
             document.getElementById('slider_favorite_sources').classList.add('hidden');
         }
 
-        const mainSheet = document.querySelector('.main');
-        const sheetHandle = document.getElementById('sheetHandle');
-        if (sheetHandle && mainSheet) {
-            sheetHandle.addEventListener('click', () => {
-                mainSheet.classList.toggle('expanded');
-            });
+        function initBottomSheetGestures() {
+            const mainSheet = document.querySelector('.main');
+            const sheetHandle = document.getElementById('sheetHandle');
+            const footerEl = document.querySelector('.footer');
+            if (!mainSheet || !sheetHandle) return;
+
+            let isDragging = false;
+            let startY = 0;
+            let startHeight = 0;
+            let startTime = 0;
+            let currentDeltaY = 0;
+            let startScrollTop = 0;
+
+            const isMobile = () => window.innerWidth <= 992;
+            const getExpandedHeight = () => window.innerHeight;
+            const getCollapsedHeight = () => Math.round(window.innerHeight * 0.50);
+
+            function setSheetHeight(heightPx) {
+                mainSheet.style.transition = 'none';
+                mainSheet.style.height = `${heightPx}px`;
+
+                const h = window.innerHeight;
+                if (heightPx > h * 0.48) {
+                    mainSheet.style.zIndex = '200';
+                } else {
+                    mainSheet.style.zIndex = '';
+                }
+
+                if (footerEl) {
+                    footerEl.style.transition = 'none';
+                    if (heightPx > h * 0.70) {
+                        const progress = Math.min(1, Math.max(0, (heightPx - h * 0.70) / (h * 0.15)));
+                        footerEl.style.opacity = (1 - progress).toString();
+                        footerEl.style.pointerEvents = 'none';
+                    } else {
+                        footerEl.style.opacity = '1';
+                        footerEl.style.pointerEvents = 'auto';
+                        footerEl.style.bottom = `${heightPx + 12}px`;
+                    }
+                }
+            }
+
+            function snapToState(expand) {
+                mainSheet.style.transition = '';
+                mainSheet.style.height = '';
+                mainSheet.style.zIndex = '';
+                if (footerEl) {
+                    footerEl.style.transition = '';
+                    footerEl.style.bottom = '';
+                    footerEl.style.opacity = '';
+                    footerEl.style.pointerEvents = '';
+                }
+
+                if (expand) {
+                    mainSheet.classList.add('expanded');
+                    if (window.closeAllMenus) window.closeAllMenus();
+                } else {
+                    mainSheet.classList.remove('expanded');
+                }
+            }
+
+            function onPointerStart(e) {
+                if (!isMobile()) return;
+
+                const isHandle = e.target === sheetHandle || sheetHandle.contains(e.target);
+                if (!isHandle) {
+                    if (mainSheet.scrollTop > 5) return;
+                    const rect = mainSheet.getBoundingClientRect();
+                    const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                    if (clientY - rect.top > 45) return;
+                }
+
+                isDragging = true;
+                startY = e.touches ? e.touches[0].clientY : e.clientY;
+                startHeight = mainSheet.getBoundingClientRect().height;
+                startTime = Date.now();
+                currentDeltaY = 0;
+                startScrollTop = mainSheet.scrollTop;
+
+                sheetHandle.classList.add('dragging');
+                mainSheet.style.transition = 'none';
+                if (footerEl) footerEl.style.transition = 'none';
+            }
+
+            function onPointerMove(e) {
+                if (!isDragging) return;
+
+                const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+                currentDeltaY = clientY - startY;
+
+                // When expanded and user scrolls down news content, don't hijack
+                if (mainSheet.classList.contains('expanded') && startScrollTop > 0 && currentDeltaY < 0) {
+                    return;
+                }
+
+                if (e.cancelable && (e.touches || Math.abs(currentDeltaY) > 5)) {
+                    e.preventDefault();
+                }
+
+                const expH = getExpandedHeight();
+                const colH = getCollapsedHeight();
+
+                let newHeight = startHeight - currentDeltaY;
+
+                // Elastic resistance at boundaries
+                if (newHeight > expH) {
+                    newHeight = expH + (newHeight - expH) * 0.22;
+                } else if (newHeight < colH * 0.75) {
+                    newHeight = (colH * 0.75) - ((colH * 0.75) - newHeight) * 0.22;
+                }
+
+                setSheetHeight(newHeight);
+            }
+
+            function onPointerEnd(e) {
+                if (!isDragging) return;
+                isDragging = false;
+                sheetHandle.classList.remove('dragging');
+
+                const elapsed = Math.max(1, Date.now() - startTime);
+                const velocityY = currentDeltaY / elapsed;
+                const wasExpanded = mainSheet.classList.contains('expanded');
+
+                // Tap / Click
+                if (Math.abs(currentDeltaY) < 8 && elapsed < 350) {
+                    snapToState(!wasExpanded);
+                    return;
+                }
+
+                // Fast swipe flick
+                if (velocityY < -0.3) {
+                    snapToState(true);
+                    return;
+                }
+                if (velocityY > 0.3) {
+                    snapToState(false);
+                    return;
+                }
+
+                // Dragged distance threshold
+                if (wasExpanded) {
+                    if (currentDeltaY > 45) {
+                        snapToState(false);
+                    } else {
+                        snapToState(true);
+                    }
+                } else {
+                    if (currentDeltaY < -45) {
+                        snapToState(true);
+                    } else {
+                        snapToState(false);
+                    }
+                }
+            }
+
+            // Touch events
+            sheetHandle.addEventListener('touchstart', onPointerStart, { passive: false });
+            window.addEventListener('touchmove', onPointerMove, { passive: false });
+            window.addEventListener('touchend', onPointerEnd, { passive: true });
+            window.addEventListener('touchcancel', onPointerEnd, { passive: true });
+
+            // Mouse events for desktop/DevTools mobile preview
+            sheetHandle.addEventListener('mousedown', onPointerStart);
+            window.addEventListener('mousemove', onPointerMove);
+            window.addEventListener('mouseup', onPointerEnd);
         }
+
+        initBottomSheetGestures();
 
         weather.fetchWeather().then(weatherData => {
             defaultWeather = weatherData;

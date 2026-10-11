@@ -39,6 +39,7 @@ body {
     gap: 15px;
     align-items: center;
     justify-content: center;
+    z-index: 20;
 }
 
 .header__user {
@@ -148,6 +149,14 @@ body {
     gap: 20px;
     border-radius: 15px;
     transition: all .15s ease-in-out;
+}
+
+.menu_ul_li.active {
+    background-color: var(--color-gray-f7);
+}
+
+body.dark-theme .menu_ul_li.active {
+    background-color: rgba(255, 255, 255, 0.08) !important;
 }
 
 .menu__ul_li-img_container {
@@ -1307,8 +1316,17 @@ body.dark-theme .main::-webkit-scrollbar-thumb {
 }
 
 body.dark-theme .sheet-handle {
-    background-color: #334155 !important;
+    background-color: transparent !important;
     border: none !important;
+}
+
+body.dark-theme .sheet-handle::before {
+    background-color: #3b4556 !important;
+}
+
+body.dark-theme .sheet-handle.dragging::before,
+body.dark-theme .sheet-handle:active::before {
+    background-color: var(--color-green) !important;
 }
 
 /* Header & Menu */
@@ -2397,6 +2415,10 @@ body.dark-theme .custom-map-container {
         gap: 10px !important;
     }
 
+    body:has(.main.expanded) .header {
+        z-index: 20 !important;
+    }
+
     .header__user {
         padding: 8px 14px !important;
         border-radius: 12px !important;
@@ -2416,16 +2438,159 @@ body.dark-theme .custom-map-container {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
     }
 
+    .menu__ul {
+        top: 55px !important;
+        right: 0 !important;
+        min-width: 250px !important;
+        max-width: min(320px, calc(100vw - 30px)) !important;
+        max-height: calc(100vh - 80px) !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding: 12px 14px !important;
+        gap: 4px !important;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    /* Submenus open UNDERNEATH (снизу) instead of to the left on mobile */
+    .menu__ul_anoth {
+        display: none !important;
+        position: static !important;
+        top: auto !important;
+        right: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        background-color: var(--color-gray-f7) !important;
+        border-radius: 12px !important;
+        transform: translateY(-6px) !important;
+    }
+
+    .menu__ul_anoth.active {
+        display: flex !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        margin: 4px 0 6px 0 !important;
+        padding: 6px 8px !important;
+        transform: translateY(0) !important;
+        animation: mobileSubmenuSlideDown 0.2s cubic-bezier(0.2, 0.9, 0.3, 1) forwards !important;
+    }
+
+    @keyframes mobileSubmenuSlideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-6px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    #settings_menu,
+    #contact_menu,
+    #liked_menu {
+        min-width: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    body.dark-theme .menu__ul_anoth,
+    body.dark-theme .menu__ul_anoth.active {
+        background-color: #141924 !important;
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    .menu_ul_li.active {
+        background-color: var(--color-gray-f7) !important;
+    }
+
+    body.dark-theme .menu_ul_li.active {
+        background-color: rgba(255, 255, 255, 0.08) !important;
+    }
+
+    .menu__ul_anoth .menu_ul_li {
+        padding: 6px 10px !important;
+        gap: 12px !important;
+        border-radius: 10px !important;
+    }
+
+    .menu__ul_anoth .menu_ul_li:active,
+    .menu__ul_anoth .menu_ul_li:hover {
+        background-color: rgba(0, 0, 0, 0.04) !important;
+    }
+
+    body.dark-theme .menu__ul_anoth .menu_ul_li:active,
+    body.dark-theme .menu__ul_anoth .menu_ul_li:hover {
+        background-color: rgba(255, 255, 255, 0.05) !important;
+    }
+
+    .menu__ul_anoth .menu__ul_li-img_container {
+        width: 28px !important;
+        height: 28px !important;
+        border-radius: 8px !important;
+        flex-shrink: 0 !important;
+    }
+
+    .menu__ul_anoth .menu__ul_li-img {
+        height: 14px !important;
+    }
+
+    .menu__ul_anoth .menu__ul_li-text {
+        font-size: 13.5px !important;
+    }
+
+    .menu__ul_anoth .menu_ul_li--setting {
+        padding: 6px 8px !important;
+        gap: 10px !important;
+    }
+
     /* Bottom Sheet Container (.main) */
     .sheet-handle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        height: 32px !important;
+        margin: -6px auto 6px auto !important;
+        cursor: grab !important;
+        flex-shrink: 0 !important;
+        touch-action: none !important;
+        user-select: none !important;
+        -webkit-user-select: none !important;
+        background-color: transparent !important;
+        position: relative !important;
+    }
+
+    .sheet-handle::before {
+        content: '' !important;
         display: block !important;
         width: 44px !important;
         height: 5px !important;
         background-color: var(--color-gray-dc) !important;
         border-radius: 10px !important;
-        margin: 0 auto 14px auto !important;
-        cursor: pointer !important;
-        flex-shrink: 0 !important;
+        transition: width 0.2s ease, background-color 0.2s ease, transform 0.2s ease !important;
+        pointer-events: none !important;
+    }
+
+    .sheet-handle.dragging,
+    .sheet-handle:active {
+        cursor: grabbing !important;
+    }
+
+    .sheet-handle.dragging::before,
+    .sheet-handle:active::before {
+        background-color: var(--color-green) !important;
+        width: 54px !important;
+        transform: scaleY(1.2) !important;
     }
 
     .main {
@@ -2437,23 +2602,39 @@ body.dark-theme .custom-map-container {
         width: 100% !important;
         max-width: 100% !important;
         height: 50vh !important;
-        max-height: 85vh !important;
+        max-height: 100dvh !important;
         margin: 0 !important;
-        padding: 14px 14px 30px 14px !important;
+        padding: 10px 14px 30px 14px !important;
         border-radius: 28px 28px 0 0 !important;
         box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.3) !important;
         z-index: 50 !important;
-        transition: height 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        transition: height 0.35s cubic-bezier(0.2, 0.9, 0.3, 1) !important;
         background-color: var(--color-white) !important;
         overflow-y: auto !important;
         overflow-x: hidden !important;
+        -webkit-overflow-scrolling: touch !important;
+        overscroll-behavior-y: contain !important;
         display: flex !important;
         flex-direction: column !important;
-        gap: 20px !important;
+        gap: 18px !important;
     }
 
     .main.expanded {
-        height: 85vh !important;
+        height: 100dvh !important;
+        border-radius: 0 !important;
+        z-index: 200 !important;
+        top: 0 !important;
+        padding-top: max(14px, env(safe-area-inset-top, 14px)) !important;
+    }
+
+    @supports not (height: 100dvh) {
+        .main.expanded {
+            height: 100vh !important;
+            border-radius: 0 !important;
+            z-index: 200 !important;
+            top: 0 !important;
+            padding-top: max(14px, env(safe-area-inset-top, 14px)) !important;
+        }
     }
 
     /* Floating Weather & Logo over Map (Positioned right above bottom sheet) */
@@ -2471,11 +2652,13 @@ body.dark-theme .custom-map-container {
         z-index: 60 !important;
         pointer-events: none !important;
         margin: 0 !important;
-        transition: bottom 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        transition: bottom 0.35s cubic-bezier(0.2, 0.9, 0.3, 1), opacity 0.25s ease, transform 0.25s ease !important;
     }
 
     .main.expanded~.footer {
-        bottom: calc(85vh + 12px) !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        transform: translateY(20px) !important;
     }
 
     .footer>* {
