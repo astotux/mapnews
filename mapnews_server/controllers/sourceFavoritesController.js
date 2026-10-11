@@ -5,7 +5,7 @@ const sourceFavoritesController = {
     async getSources(req, res) {
         try {
             const user = await User.findById(req.user.userId)
-                .populate('favorites.sources', 'title');
+                .populate('favorites.sources', 'title imageUrl description siteUrl');
             
             if (!user) {
                 return res.status(404).json({ message: 'Пользователь не найден' });

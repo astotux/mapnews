@@ -5,7 +5,7 @@ const cityFavoritesController = {
     async getCities(req, res) {
         try {
             const user = await User.findById(req.user.userId)
-                .populate('favorites.cities', 'name');
+                .populate('favorites.cities', 'name imageUrl coordinates center');
             
             if (!user) {
                 return res.status(404).json({ message: 'Пользователь не найден' });
