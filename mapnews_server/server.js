@@ -15,17 +15,30 @@ const authRoutes = require('./routes/auth');
 const newsRoutes = require('./routes/news');
 const citiesRoutes = require('./routes/cities');
 const sourcesRoutes = require('./routes/source');
+const weatherRoutes = require('./routes/weather');
+const weatherService = require('./services/weatherService');
 
 const app = express();
 
 mongoose.connect(MONGO_URI)
-    .then(() => console.log('MongoDB подключен'))
+    .then(() => {
+        console.log('MongoDB подключен');
+        // Start weather service background scheduler (updates every 10 min)
+        weatherService.startScheduler();
+    })
     .catch(err => {
         console.error('Ошибка подключения к MongoDB Atlas:', err.message);
         console.log('Попытка подключения к локальной MongoDB (mongodb://127.0.0.1:27017/news)...');
         return mongoose.connect('mongodb+srv://admin:E0YEWac4wSDIxC5D@cluster0.eze8dor.mongodb.net/news')
-            .then(() => console.log('Подключено к локальной MongoDB!'))
-            .catch(localErr => console.error('Не удалось подключиться к базе данных:', localErr.message));
+            .then(() => {
+                console.log('Подключено к локальной MongoDB!');
+                weatherService.startScheduler();
+            })
+            .catch(localErr => {
+                console.error('Не удалось подключиться к базе данных:', localErr.message);
+                // Still start weather service even if DB failed
+                weatherService.startScheduler();
+            });
     });
 
 
@@ -39,6 +52,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/news', newsRoutes);
 app.use('/api/cities', citiesRoutes);
 app.use('/api/sources', sourcesRoutes);
+app.use('/api/weather', weatherRoutes);
 
 app.use((err, req, res, next) => {
     console.error(err.stack);
