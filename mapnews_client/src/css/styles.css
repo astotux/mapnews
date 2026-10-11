@@ -2968,10 +2968,16 @@ body.dark-theme .custom-map-container {
 
     .new-source-container {
         padding: 2px 5px !important;
-        max-width: calc(100% - 35px) !important;
+        max-width: calc(100% - 32px) !important;
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         order: 1 !important;
+        display: flex !important;
+        align-items: center !important;
+        gap: 5px !important;
+        min-width: 0 !important;
+        flex-shrink: 1 !important;
+        box-sizing: border-box !important;
     }
 
     .new-source-img {
@@ -2985,6 +2991,16 @@ body.dark-theme .custom-map-container {
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         white-space: nowrap !important;
+        min-width: 0 !important;
+        flex-shrink: 1 !important;
+    }
+
+    .new__like-source-btn {
+        width: 18px !important;
+        height: 18px !important;
+        padding: 3.5px !important;
+        flex-shrink: 0 !important;
+        border-radius: 5px !important;
     }
 
     .new__bottom__right {
@@ -2992,15 +3008,30 @@ body.dark-theme .custom-map-container {
     }
 
     .share-btn {
+        width: 24px !important;
+        height: 20px !important;
+        min-width: 24px !important;
+        max-width: 24px !important;
+        min-height: 20px !important;
+        max-height: 20px !important;
         padding: 4px 6px !important;
         border-radius: 8px !important;
         order: 2 !important;
         flex-shrink: 0 !important;
+        box-sizing: border-box !important;
+        display: inline-flex !important;
+        justify-content: center !important;
+        align-items: center !important;
     }
 
     .share-img {
         height: 12px !important;
         width: 12px !important;
+        max-height: 12px !important;
+        max-width: 12px !important;
+        object-fit: contain !important;
+        display: block !important;
+        flex-shrink: 0 !important;
     }
 
     .open-new {
