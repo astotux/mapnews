@@ -3,6 +3,9 @@ export const LOCATION = {
     zoom: 6
 };
 
+// Автоматически использует текущий хост — работает и локально и на сервере
+export const API_BASE = `${window.location.protocol}//${window.location.hostname}${window.location.port && window.location.port !== '80' && window.location.port !== '443' ? ':' + window.location.port : ''}`;
+
 export const POLYGON_STYLE = {
     fill: 'rgba(255, 255, 255, 0.12)',
     stroke: 'rgba(255, 255, 255, 0.6)',

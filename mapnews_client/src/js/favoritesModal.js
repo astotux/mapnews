@@ -5,7 +5,10 @@
 
 (function () {
     let overlayElement = null;
-    let currentType = 'news'; // 'news' | 'sources' | 'cities'
+    let currentType = 'news';
+
+    // Берём базовый URL динамически — работает и локально и на сервере
+    const API_BASE = `${window.location.protocol}//${window.location.hostname}${window.location.port && window.location.port !== '80' && window.location.port !== '443' ? ':' + window.location.port : ''}`;
 
     const TITLES = {
         news: 'Избранные события',
@@ -121,7 +124,7 @@
             return window.allCities;
         }
         try {
-            const res = await fetch('http://localhost:8080/api/cities');
+            const res = await fetch('${API_BASE}/api/cities');
             if (res.ok) {
                 const data = await res.json();
                 window.citiesList = data;
@@ -137,7 +140,7 @@
             return window.sourcesList;
         }
         try {
-            const res = await fetch('http://localhost:8080/api/sources');
+            const res = await fetch('${API_BASE}/api/sources');
             if (res.ok) {
                 const data = await res.json();
                 window.sourcesList = data;
@@ -153,7 +156,7 @@
             return { unauthorized: true, data: [] };
         }
 
-        const res = await fetch(`http://localhost:8080/api/favorites/${type}`, {
+        const res = await fetch(`${API_BASE}/api/favorites/${type}`, {
             method: 'GET',
             headers: {
                 'Authorization': `Bearer ${token}`,
@@ -191,10 +194,10 @@
         if (!url || typeof url !== 'string' || !url.trim()) return fallback;
         const clean = url.trim();
         if (clean.startsWith('/images/')) {
-            return `http://localhost:8080${clean}`;
+            return `${API_BASE}${clean}`;
         }
         if (clean.startsWith('images/')) {
-            return `http://localhost:8080/${clean}`;
+            return `${API_BASE}/${clean}`;
         }
         return clean;
     }
@@ -455,7 +458,7 @@
                 try {
                     const token = localStorage.getItem('jwt_token');
                     if (token) {
-                        await fetch(`http://localhost:8080/api/favorites/${itemType}/${itemId}`, {
+                        await fetch(`${API_BASE}/api/favorites/${itemType}/${itemId}`, {
                             method: 'DELETE',
                             headers: {
                                 'Authorization': `Bearer ${token}`,

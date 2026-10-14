@@ -4,6 +4,8 @@
  * Supports current weather, WMO weather codes, and batch multi-coordinate queries.
  */
 
+import { API_BASE } from '../constants.js';
+
 // Precise geographic coordinates for Komi Republic districts
 export const DISTRICT_COORDS = {
     'Сыктывкар': { lat: 61.6764, lon: 50.8099 },
@@ -329,7 +331,7 @@ export class WeatherManager {
     constructor() {
         this.cache = new Map();
         this.cacheExpiry = 15 * 60 * 1000; // 15 minutes
-        this.serverBase = 'http://localhost:8080';
+        this.serverBase = API_BASE;
     }
 
     /**

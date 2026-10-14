@@ -1,10 +1,12 @@
+import { API_BASE } from '../constants.js';
+
 export class FavoritesService {
     static async getFavorites(type) {
         try {
             const token = localStorage.getItem('jwt_token');
             if (!token) return [];
 
-            const response = await fetch(`http://localhost:8080/api/favorites/${type}`, {
+            const response = await fetch(`${API_BASE}/api/favorites/${type}`, {
                 method: 'GET',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -28,7 +30,7 @@ export class FavoritesService {
             const token = localStorage.getItem('jwt_token');
             if (!token) throw new Error('Не авторизован');
 
-            const response = await fetch(`http://localhost:8080/api/favorites/${type}/${itemId}`, {
+            const response = await fetch(`${API_BASE}/api/favorites/${type}/${itemId}`, {
                 method: 'POST',
                 headers: {
                     'Authorization': `Bearer ${token}`,
@@ -52,7 +54,7 @@ export class FavoritesService {
             const token = localStorage.getItem('jwt_token');
             if (!token) throw new Error('Не авторизован');
 
-            const response = await fetch(`http://localhost:8080/api/favorites/${type}/${itemId}`, {
+            const response = await fetch(`${API_BASE}/api/favorites/${type}/${itemId}`, {
                 method: 'DELETE',
                 headers: {
                     'Authorization': `Bearer ${token}`,
