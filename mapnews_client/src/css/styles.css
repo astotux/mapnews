@@ -1875,12 +1875,13 @@ body.dark-theme .logo-login {
 
 .login-container {
     font-family: "Montserrat", sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
     width: 100%;
     min-height: 100vh;
     min-height: 100dvh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 24px 16px;
     box-sizing: border-box;
     background-color: #f5f6f8;
@@ -2778,6 +2779,7 @@ body.dark-theme .custom-map-container {
         min-height: 100vh !important;
         min-height: 100dvh !important;
         overflow: visible !important;
+        align-items: flex-start;
     }
 
     .login-cont,
