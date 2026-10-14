@@ -3919,7 +3919,7 @@ body.dark-theme .new__item-img--contain {
 @media (max-width: 992px) {
 
     .login-container {
-        height: 110%;
+        height: 130%;
     }
     .favorites-modal-overlay {
         padding: 0 !important;
