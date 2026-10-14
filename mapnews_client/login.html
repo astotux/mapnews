@@ -78,11 +78,12 @@
             const email = document.getElementById('email').value;
             const password = document.getElementById('password').value;
 
-            const success = await auth.login(email, password);
+            const result = await auth.login(email, password);
             
-            if (success) {
+            if (result.success) {
                 window.location.href = '/';
             } else {
+                errorMessage.textContent = result.message || 'Неверный email или пароль';
                 errorMessage.style.display = 'block';
             }
         });

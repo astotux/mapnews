@@ -16,11 +16,17 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    isVerified: {
+        type: Boolean,
+        default: true
+    },
     favorites: {
         news: [{ type: mongoose.Schema.Types.ObjectId, ref: 'news' }],
         sources: [{ type: mongoose.Schema.Types.ObjectId, ref: 'source' }],
         cities: [{ type: mongoose.Schema.Types.ObjectId, ref: 'city' }]
     }
+}, {
+    timestamps: true
 });
 
 module.exports = mongoose.model('user', userSchema);
