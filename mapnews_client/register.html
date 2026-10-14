@@ -124,7 +124,6 @@
 
             <!-- STEP 2: Email Verification Code Form -->
             <form class="login-form verification-step" id="verifyForm" style="display: none;">
-                <div class="verification-step-icon">✉️</div>
                 <h2>Подтверждение почты</h2>
                 <p class="verification-step-desc">
                     Мы отправили 6-значный код подтверждения на адрес:<br>
@@ -146,11 +145,6 @@
                 <div class="resend-box">
                     <span id="countdownText">Отправить повторно через <b id="countdownTimer">60</b> сек</span>
                     <button type="button" class="resend-btn" id="resendBtn" style="display: none;">Отправить код повторно</button>
-                </div>
-
-                <div class="dev-code-hint" id="devCodeHint" style="display: none;">
-                    <span>Код для проверки: <strong id="devCodeValue">123456</strong></span>
-                    <button type="button" id="copyDevCodeBtn">Вставить</button>
                 </div>
 
                 <button type="button" class="back-to-step1-btn" id="backToStep1Btn">
@@ -202,9 +196,6 @@
         const countdownTimer = document.getElementById('countdownTimer');
         const resendBtn = document.getElementById('resendBtn');
         const backToStep1Btn = document.getElementById('backToStep1Btn');
-        const devCodeHint = document.getElementById('devCodeHint');
-        const devCodeValue = document.getElementById('devCodeValue');
-        const copyDevCodeBtn = document.getElementById('copyDevCodeBtn');
 
         let resendInterval = null;
         let currentEmail = '';
@@ -355,14 +346,6 @@
                     codeInputs.forEach(i => i.value = '');
                     codeInputs[0].focus();
 
-                    // Development mode helper (if SMTP is not configured)
-                    if (res.devCode) {
-                        devCodeValue.textContent = res.devCode;
-                        devCodeHint.style.display = 'inline-flex';
-                    } else {
-                        devCodeHint.style.display = 'none';
-                    }
-
                     startCountdown(60);
                 } else {
                     errorMessage.textContent = res.message || 'Ошибка при регистрации';
@@ -420,15 +403,6 @@
         function getEnteredCode() {
             return codeInputs.map(i => i.value).join('');
         }
-
-        // Auto paste dev code button
-        copyDevCodeBtn.addEventListener('click', () => {
-            const code = devCodeValue.textContent.trim();
-            for (let i = 0; i < codeInputs.length; i++) {
-                codeInputs[i].value = code[i] || '';
-            }
-            submitVerify();
-        });
 
         // Step 2: Verify Code Submit
         verifyForm.addEventListener('submit', (e) => {
@@ -501,10 +475,6 @@
             try {
                 const res = await auth.resendCode(currentEmail);
                 if (res.success) {
-                    if (res.devCode) {
-                        devCodeValue.textContent = res.devCode;
-                        devCodeHint.style.display = 'inline-flex';
-                    }
                     startCountdown(60);
                 } else {
                     verifyErrorMessage.textContent = res.message || 'Ошибка отправки кода';

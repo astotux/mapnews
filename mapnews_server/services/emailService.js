@@ -104,10 +104,16 @@ async function sendVerificationCode(email, name, code) {
 
     try {
         await transport.sendMail({
-            from: SMTP_FROM || '"MapNews" <noreply@mapnews.ru>',
+            from: SMTP_FROM || `"MapNews" <${SMTP_USER}>`,
+            replyTo: SMTP_USER,
             to: email,
-            subject: `${code} — Код подтверждения регистрации в MapNews`,
-            text: `Здравствуйте, ${name}!\n\nВаш код подтверждения регистрации в MapNews: ${code}\nКод действителен 15 минут.\n\nЕсли вы не регистрировались на сайте, проигнорируйте это письмо.`,
+            subject: `${code} — ваш код подтверждения MapNews`,
+            headers: {
+                'X-Mailer': 'MapNews Mailer',
+                'X-Priority': '3',
+                'Precedence': 'transactional'
+            },
+            text: `Здравствуйте, ${name}!\n\nВаш код подтверждения для регистрации в MapNews: ${code}\n\nКод действителен 15 минут.\n\nЕсли вы не регистрировались на сайте MapNews — просто проигнорируйте это письмо.\n\n—\nMapNews`,
             html: htmlContent
         });
 

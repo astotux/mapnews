@@ -7,9 +7,6 @@ const { JWT_SECRET } = require('../config');
 const { validatePassword, validateEmail, validateName } = require('../utils/validators');
 const emailService = require('../services/emailService');
 
-// devCode (код прямо в ответе) доступен только в режиме разработки
-const IS_DEV = process.env.NODE_ENV !== 'production';
-
 const authController = {
     /**
      * Step 1: Validate input, create pending registration, and send 6-digit verification code to email
@@ -74,12 +71,6 @@ const authController = {
                 email: cleanEmail
             };
 
-            // devCode возвращается только в dev-режиме (NODE_ENV !== 'production')
-            if (IS_DEV) {
-                responsePayload.devCode = code;
-            }
-
-            // Если SMTP настроен, но письмо не ушло — сообщить в ответе (не падать с 500)
             if (!emailResult.delivered && emailResult.error) {
                 console.error(`[register] Письмо не доставлено: ${emailResult.error}`);
                 responsePayload.emailWarning = 'Не удалось отправить письмо. Обратитесь к администратору.';
@@ -209,9 +200,6 @@ const authController = {
             const responsePayload = {
                 message: 'Новый код подтверждения успешно отправлен на вашу почту!'
             };
-            if (IS_DEV) {
-                responsePayload.devCode = newCode;
-            }
             if (!emailResult.delivered && emailResult.error) {
                 console.error(`[resendCode] Письмо не доставлено: ${emailResult.error}`);
                 responsePayload.emailWarning = 'Не удалось отправить письмо. Обратитесь к администратору.';

@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 const dns = require('dns');
 try {
     dns.setDefaultResultOrder('ipv4first');
