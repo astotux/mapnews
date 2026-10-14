@@ -59,8 +59,8 @@ export class MapManager {
 
         // Inject animated weather patterns in SVG defs
         this.defs = document.createElementNS('http://www.w3.org/2000/svg', 'defs');
-        const isMobile = window.innerWidth <= 992;
-        this.currentPatternScale = isMobile ? 0.35 : 1.0;
+        this.isMobile = window.innerWidth <= 992;
+        this.currentPatternScale = this.isMobile ? 0.35 : 1.0;
         this.defs.innerHTML = this.getWeatherPatternDefs(this.currentPatternScale);
         this.svg.appendChild(this.defs);
 
@@ -98,31 +98,29 @@ export class MapManager {
      */
     getWeatherPatternDefs(scaleFactor = null) {
         if (scaleFactor === null) {
-            const isMobile = window.innerWidth <= 992;
-            scaleFactor = isMobile ? 0.35 : 1.0;
+            this.isMobile = window.innerWidth <= 992;
+            scaleFactor = this.isMobile ? 0.35 : 1.0;
         }
 
         const s = (val) => Number((val * scaleFactor).toFixed(1));
+        // On mobile: strip all animateTransform to prevent constant GPU repaints
+        const anim = this.isMobile ? '' : null;
+        const A = (from, to, dur) => this.isMobile ? '' :
+            `<animateTransform attributeName="patternTransform" type="translate"
+                from="${from}" to="${to}" dur="${dur}" repeatCount="indefinite"/>`;
 
         return `
-            <!-- Rain: Elegant flowing raindrops -->
+            <!-- Rain -->
             <pattern id="pattern-weather-rain" width="${s(100)}" height="${s(100)}" viewBox="0 0 100 100" patternUnits="userSpaceOnUse">
                 <g stroke="#D7E9FF" stroke-width="1.2" stroke-linecap="round" opacity="0.55">
                     <path d="M18 8 L13 22" />
                     <path d="M72 38 L67 52" />
                     <path d="M43 68 L38 82" />
                 </g>
-                <animateTransform
-                    attributeName="patternTransform"
-                    type="translate"
-                    from="0 -${s(100)}"
-                    to="0 0"
-                    dur="5s"
-                    repeatCount="indefinite"
-                />
+                ${A(`0 -${s(100)}`, `0 0`, '5s')}
             </pattern>
 
-            <!-- Heavy rain: Dense, dynamic blue streaks -->
+            <!-- Heavy rain -->
             <pattern id="pattern-weather-heavy-rain" width="${s(100)}" height="${s(100)}" viewBox="0 0 100 100" patternUnits="userSpaceOnUse">
                 <g stroke="#C6E0FF" stroke-width="1.4" stroke-linecap="round" opacity="0.7">
                     <path d="M12 5 L7 20" />
@@ -131,17 +129,10 @@ export class MapManager {
                     <path d="M29 58 L24 73" />
                     <path d="M65 82 L60 97" />
                 </g>
-                <animateTransform
-                    attributeName="patternTransform"
-                    type="translate"
-                    from="0 -${s(100)}"
-                    to="0 0"
-                    dur="4s"
-                    repeatCount="indefinite"
-                />
+                ${A(`0 -${s(100)}`, `0 0`, '4s')}
             </pattern>
 
-            <!-- Snow: Delicate crystalline snowflakes -->
+            <!-- Snow -->
             <pattern id="pattern-weather-snow" width="${s(48)}" height="${s(48)}" viewBox="0 0 48 48" patternUnits="userSpaceOnUse">
                 <g stroke="#E0F2FE" stroke-linecap="round" stroke-width="1.25" opacity=".9">
                     <path d="M12 5v12M7 8l10 6M17 8L7 14"/>
@@ -153,11 +144,10 @@ export class MapManager {
                     <circle cx="5" cy="30" r="1.3" opacity=".7"/>
                     <circle cx="42" cy="44" r="1.5" opacity=".85"/>
                 </g>
-                <animateTransform attributeName="patternTransform" type="translate"
-                    from="0 -${s(48)}" to="${s(5)} ${s(48)}" dur="4s" repeatCount="indefinite"/>
+                ${A(`0 -${s(48)}`, `${s(5)} ${s(48)}`, '4s')}
             </pattern>
 
-            <!-- Sleet: Crystal ice mixed with rain -->
+            <!-- Sleet -->
             <pattern id="pattern-weather-sleet" width="${s(40)}" height="${s(40)}" viewBox="0 0 40 40" patternUnits="userSpaceOnUse">
                 <g stroke-linecap="round">
                     <path d="M9 3l-4 12" stroke="#38BDF8" stroke-width="2" opacity=".8"/>
@@ -171,36 +161,31 @@ export class MapManager {
                     <circle cx="33" cy="10" r="1.6" opacity=".9"/>
                     <circle cx="7" cy="34" r="1.4" opacity=".75"/>
                 </g>
-                <animateTransform attributeName="patternTransform" type="translate"
-                    from="0 -${s(40)}" to="-${s(7)} ${s(40)}" dur="1.35s" repeatCount="indefinite"/>
+                ${A(`0 -${s(40)}`, `-${s(7)} ${s(40)}`, '1.35s')}
             </pattern>
 
-            <!-- Thunderstorm: Electric rain with golden sparks -->
+            <!-- Thunderstorm -->
             <pattern id="pattern-weather-thunder" width="${s(38)}" height="${s(38)}" viewBox="0 0 38 38" patternUnits="userSpaceOnUse">
                 <g stroke-linecap="round">
                     <path d="M8 2l-4 13" stroke="#38BDF8" stroke-width="2.2" opacity=".9"/>
                     <path d="M30 19l-4 13" stroke="#60A5FA" stroke-width="2" opacity=".8"/>
                 </g>
-                <path d="M20 7l-4 7h4l-3 6 8-9h-4l2-4Z"
-                    fill="#FACC15" opacity=".95"/>
+                <path d="M20 7l-4 7h4l-3 6 8-9h-4l2-4Z" fill="#FACC15" opacity=".95"/>
                 <circle cx="32" cy="7" r="1.5" fill="#FDE68A" opacity=".8"/>
-                <animateTransform attributeName="patternTransform" type="translate"
-                    from="0 -${s(38)}" to="-${s(10)} ${s(38)}" dur=".6s" repeatCount="indefinite"/>
+                ${A(`0 -${s(38)}`, `-${s(10)} ${s(38)}`, '0.6s')}
             </pattern>
 
-            <!-- Cloudy: Soft layered cloud silhouettes -->
+            <!-- Cloudy -->
             <pattern id="pattern-weather-cloudy" width="${s(100)}" height="${s(56)}" viewBox="0 0 100 56" patternUnits="userSpaceOnUse">
                 <path d="M8 31a9 9 0 0 1 9-9 13 13 0 0 1 24 3h3a8 8 0 0 1 0 16H17a9 9 0 0 1-9-10Z"
                     fill="#CBD5E1" opacity=".22"/>
                 <path d="M54 12a6 6 0 0 1 6-6 9 9 0 0 1 17 3h2a6 6 0 0 1 0 12H61a7 7 0 0 1-7-9Z"
                     fill="#E2E8F0" opacity=".18"/>
-                <path d="M17 27c5-4 11-4 16-2" stroke="#FFFFFF" stroke-width="1.5"
-                    stroke-linecap="round" opacity=".3"/>
-                <animateTransform attributeName="patternTransform" type="translate"
-                    from="-${s(100)} 0" to="${s(100)} 0" dur="28s" repeatCount="indefinite"/>
+                <path d="M17 27c5-4 11-4 16-2" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" opacity=".3"/>
+                ${A(`-${s(100)} 0`, `${s(100)} 0`, '28s')}
             </pattern>
 
-            <!-- Partly cloudy: Warm solar glows and drifting clouds -->
+            <!-- Partly cloudy -->
             <pattern id="pattern-weather-partly-cloudy" width="${s(100)}" height="${s(58)}" viewBox="0 0 100 58" patternUnits="userSpaceOnUse">
                 <defs>
                     <radialGradient id="patternSunGlow">
@@ -215,11 +200,10 @@ export class MapManager {
                 </g>
                 <path d="M37 38a7 7 0 0 1 7-7 10 10 0 0 1 19 3h2a6 6 0 0 1 0 12H44a7 7 0 0 1-7-8Z"
                     fill="#E2E8F0" opacity=".3"/>
-                <animateTransform attributeName="patternTransform" type="translate"
-                    from="-${s(100)} 0" to="${s(100)} 0" dur="30s" repeatCount="indefinite"/>
+                ${A(`-${s(100)} 0`, `${s(100)} 0`, '30s')}
             </pattern>
 
-            <!-- Fog: Layered translucent mist -->
+            <!-- Fog -->
             <pattern id="pattern-weather-fog" width="${s(100)}" height="${s(48)}" viewBox="0 0 100 48" patternUnits="userSpaceOnUse">
                 <g fill="none" stroke-linecap="round">
                     <path d="M-10 13h58" stroke="#E2E8F0" stroke-width="5" opacity=".25"/>
@@ -227,11 +211,10 @@ export class MapManager {
                     <path d="M-20 34h72" stroke="#F1F5F9" stroke-width="5" opacity=".35"/>
                     <path d="M57 43h58" stroke="#94A3B8" stroke-width="3" opacity=".2"/>
                 </g>
-                <animateTransform attributeName="patternTransform" type="translate"
-                    from="-${s(100)} 0" to="${s(100)} 0" dur="18s" repeatCount="indefinite"/>
+                ${A(`-${s(100)} 0`, `${s(100)} 0`, '18s')}
             </pattern>
 
-            <!-- Clear sky: Elegant golden dust and sun glints -->
+            <!-- Clear sky -->
             <pattern id="pattern-weather-clear" width="${s(72)}" height="${s(72)}" viewBox="0 0 72 72" patternUnits="userSpaceOnUse">
                 <defs>
                     <radialGradient id="patternGoldenGlow">
@@ -247,8 +230,7 @@ export class MapManager {
                     <path d="M20 14v-3M20 26v3M14 20h-3M26 20h3" stroke-width="1.2"/>
                     <path d="M48 34l2 2M50 34l-2 2" stroke-width="1.4"/>
                 </g>
-                <animateTransform attributeName="patternTransform" type="translate"
-                    from="0 0" to="${s(18)} ${s(18)}" dur="12s" repeatCount="indefinite"/>
+                ${A(`0 0`, `${s(18)} ${s(18)}`, '12s')}
             </pattern>
         `;
     }
@@ -290,6 +272,7 @@ export class MapManager {
 
         const padding = 80;
         const isMobile = window.innerWidth <= 992;
+        this.isMobile = isMobile;
         const targetPatternScale = isMobile ? 0.35 : 1.0;
         if (this.currentPatternScale !== targetPatternScale) {
             this.currentPatternScale = targetPatternScale;
@@ -556,24 +539,29 @@ export class MapManager {
         // Drag / Pan
         this.container.addEventListener('pointerdown', (e) => {
             if (e.target.closest('.custom-map-controls') || e.target.closest('.marker')) return;
-            // Ignore pointer events when two fingers are on screen (pinch)
             if (this._activeTouches && this._activeTouches >= 2) return;
             this.isDragging = true;
             this.startX = e.clientX - this.panX;
             this.startY = e.clientY - this.panY;
+            this.container.setPointerCapture(e.pointerId);
             this.container.style.cursor = 'grabbing';
         });
 
-        window.addEventListener('pointermove', (e) => {
+        this.container.addEventListener('pointermove', (e) => {
             if (!this.isDragging) return;
             this.panX = e.clientX - this.startX;
             this.panY = e.clientY - this.startY;
             this.updateTransform();
         });
 
-        window.addEventListener('pointerup', () => {
+        this.container.addEventListener('pointerup', () => {
             this.isDragging = false;
-            if (this.container) this.container.style.cursor = 'default';
+            this.container.style.cursor = 'default';
+        });
+
+        this.container.addEventListener('pointercancel', () => {
+            this.isDragging = false;
+            this.container.style.cursor = 'default';
         });
 
         // Wheel Zoom
