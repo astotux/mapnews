@@ -71,6 +71,27 @@ function initializeSliders() {
             slidesContainer.style.cursor = 'grab';
         });
 
+        // Touch swipe support
+        let touchStartX = 0;
+        let touchScrollStart = 0;
+
+        slidesContainer.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].pageX;
+            touchScrollStart = currentOffset;
+        }, { passive: true });
+
+        slidesContainer.addEventListener('touchmove', (e) => {
+            const distance = e.touches[0].pageX - touchStartX;
+            const maxOffset = slides.scrollWidth - getVisibleWidth();
+            currentOffset = Math.max(0, Math.min(touchScrollStart - distance, maxOffset));
+            slides.style.transform = `translateX(-${currentOffset}px)`;
+            updateButtons();
+        }, { passive: true });
+
+        slidesContainer.addEventListener('touchend', () => {
+            updateButtons();
+        }, { passive: true });
+
         initializeSlider();
 
         window.addEventListener('resize', initializeSlider);

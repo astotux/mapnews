@@ -385,6 +385,8 @@ body.dark-theme .menu_ul_li.active {
 .slides-container {
     overflow: hidden;
     border-radius: 12px;
+    /* touch swipe on mobile */
+    touch-action: pan-x;
 }
 
 .slides {
@@ -1875,12 +1877,13 @@ body.dark-theme .logo-login {
     font-family: "Montserrat", sans-serif;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     min-height: 100vh;
     padding: 24px 16px;
     box-sizing: border-box;
     background-color: #f5f6f8;
     transition: background-color 0.25s ease;
+    overflow-y: auto;
 }
 
 .login-cont {

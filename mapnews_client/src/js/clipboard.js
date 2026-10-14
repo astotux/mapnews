@@ -1,43 +1,27 @@
-function clipboard (text) {
+function clipboard(text, triggerEl) {
     navigator.clipboard.writeText(text)
-    .then(() => {
-        let existingDiv = footer.querySelector('#clipboard');
-        console.log(existingDiv)
-        if (existingDiv) {
-            existingDiv.classList.remove('fade-out');
-            setTimeout(function() {
-                existingDiv.classList.add('fade-out');
-            }, 3000); 
-            setTimeout(function() {
-                existingDiv.remove();
-            }, 3500); 
-        } else {
-            let newDiv = document.createElement('div');
-            newDiv.classList.add("logo");
-            newDiv.id = "clipboard";
-            const img = document.createElement('img');
-            img.src = './src/images/icons/copy.png'
-            img.classList.add("logo__img");
-            const p = document.createElement('p');
-            p.textContent = "Скопировано";
-            p.style.color = 'grey'
-            p.classList.add("logo__text");
-            
-            newDiv.appendChild(img)
-            newDiv.appendChild(p)
-        
-            document.getElementById('footer').appendChild(newDiv);
-    
-            setTimeout(function() {
-                newDiv.classList.add('fade-out');
-            }, 3000);
-        
-            setTimeout(function() {
-                newDiv.remove();
-            }, 3500); 
-        }})
-    
-    .catch(err => {
-      console.log('Something went wrong', err);
-    });
+        .then(() => {
+            // Найти элемент который был нажат
+            const el = triggerEl || (window.event && window.event.currentTarget) || null;
+            if (!el) return;
+
+            // Если уже показываем галочку — не дублируем
+            if (el.dataset.checkActive) return;
+            el.dataset.checkActive = '1';
+
+            // Запомнить оригинальный HTML
+            const originalHTML = el.innerHTML;
+
+            // Показать галочку
+            el.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                fill="none" stroke="#40C196" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>`;
+
+            setTimeout(() => {
+                el.innerHTML = originalHTML;
+                delete el.dataset.checkActive;
+            }, 2000);
+        })
+        .catch(err => console.log('Clipboard error:', err));
 }

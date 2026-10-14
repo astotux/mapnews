@@ -280,7 +280,7 @@
                         </div>
                         <div class="new__bottom__right">
                             ${item.newsUrl ? `
-                                <div class="share-btn" onclick="clipboard('${item.newsUrl}')" title="Скопировать ссылку">
+                                <div class="share-btn" onclick="clipboard('${item.newsUrl}', this)" title="Скопировать ссылку">
                                     <img src="./src/images/icons/copy.png" width="18" height="18" alt="" class="share-img">
                                 </div>
                                 <a href="${item.newsUrl}" class="open-new" target="_blank" rel="noopener noreferrer">Перейти</a>
@@ -323,7 +323,7 @@
                         </div>
                         <div class="new__bottom__right">
                             ${siteUrl ? `
-                                <div class="share-btn" onclick="clipboard('${siteUrl}')" title="Скопировать ссылку">
+                                <div class="share-btn" onclick="clipboard('${siteUrl}', this)" title="Скопировать ссылку">
                                     <img src="./src/images/icons/copy.png" width="18" height="18" alt="" class="share-img">
                                 </div>
                                 <a href="${siteUrl}" class="open-new" target="_blank" rel="noopener noreferrer">Перейти</a>

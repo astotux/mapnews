@@ -140,7 +140,7 @@ class NewsItemManager {
     createBottomRight(item) {
         return `
             <div class="new__bottom__right">
-                <div class="share-btn" onclick="clipboard('${item.newsUrl}')">
+                <div class="share-btn" onclick="clipboard('${item.newsUrl}', this)">
                     <img src="./src/images/icons/copy.png" width="24px" height="24px" alt="" class="share-img">
                 </div>
                 <a href="${item.newsUrl}" class="open-new" target="_blank">Перейти</a>
