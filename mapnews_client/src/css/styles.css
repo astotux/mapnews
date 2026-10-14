@@ -1883,7 +1883,7 @@ body.dark-theme .logo-login {
     box-sizing: border-box;
     background-color: #f5f6f8;
     transition: background-color 0.25s ease;
-    overflow-y: auto;
+    overflow-y: scroll;
 }
 
 .login-cont {
@@ -1893,6 +1893,7 @@ body.dark-theme .logo-login {
     width: 100%;
     max-width: 400px;
     transition: all 0.25s ease;
+    overflow-y: scroll;
 }
 
 .login-form {
@@ -1904,6 +1905,7 @@ body.dark-theme .logo-login {
     box-sizing: border-box;
     width: 100%;
     border: none;
+    overflow-y: scroll;
 }
 
 .login-form h2 {
