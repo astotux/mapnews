@@ -1878,22 +1878,25 @@ body.dark-theme .logo-login {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    width: 100%;
     min-height: 100vh;
+    min-height: 100dvh;
     padding: 24px 16px;
     box-sizing: border-box;
     background-color: #f5f6f8;
     transition: background-color 0.25s ease;
-    overflow-y: scroll;
+    overflow: visible;
 }
 
 .login-cont {
-    margin-left: -170px;
     position: relative;
     z-index: 2;
+    margin-left: 0;
     width: 100%;
     max-width: 400px;
+    box-sizing: border-box;
     transition: all 0.25s ease;
-    overflow-y: scroll;
+    overflow: visible;
 }
 
 .login-form {
@@ -1905,7 +1908,27 @@ body.dark-theme .logo-login {
     box-sizing: border-box;
     width: 100%;
     border: none;
-    overflow-y: scroll;
+    overflow: visible;
+}
+
+@media (max-width: 768px) {
+    .login-container {
+        min-height: 100vh;
+        min-height: 100dvh;
+        padding: 20px 16px 32px;
+        align-items: flex-start;
+    }
+
+    .login-cont {
+        width: 100%;
+        max-width: 400px;
+        margin-left: 0;
+    }
+
+    .login-form {
+        width: 100%;
+        padding: 1.5rem 1.25rem;
+    }
 }
 
 .login-form h2 {
@@ -3917,10 +3940,6 @@ body.dark-theme .new__item-img--contain {
 
 /* Mobile responsive layout for favorites modal */
 @media (max-width: 992px) {
-
-    .login-container {
-        height: 130%;
-    }
     .favorites-modal-overlay {
         padding: 0 !important;
         align-items: flex-end !important;
