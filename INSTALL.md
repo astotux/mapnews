@@ -123,8 +123,14 @@ server {
     root /var/www/mapnews/mapnews_client;
     index index.html;
 
+    # Убираем .html из URL: /login → /login.html
     location / {
-        try_files $uri $uri/ /index.html;
+        try_files $uri $uri.html $uri/ =404;
+    }
+
+    # Редирект если зашли с .html — убираем расширение
+    if ($request_uri ~ ^(.+)\.html$) {
+        return 301 $1;
     }
 
     # Проксирование API на бэкенд

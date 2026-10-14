@@ -1,5 +1,4 @@
 const jwt = require('jsonwebtoken');
-const { JWT_SECRET } = require('../config');
 
 const authenticateToken = (req, res, next) => {
     const authHeader = req.headers['authorization'];
@@ -9,7 +8,7 @@ const authenticateToken = (req, res, next) => {
         return res.status(401).json({ message: 'Токен отсутствует' });
     }
 
-    jwt.verify(token, JWT_SECRET, (err, user) => {
+    jwt.verify(token, process.env.JWT_SECRET || 'sigma123', (err, user) => {
         if (err) {
             return res.status(403).json({ message: 'Недействительный токен' });
         }

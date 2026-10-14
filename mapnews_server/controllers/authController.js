@@ -3,9 +3,10 @@ const User = require('../models/userSchema');
 const PendingUser = require('../models/pendingUserSchema');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const { JWT_SECRET } = require('../config');
 const { validatePassword, validateEmail, validateName } = require('../utils/validators');
 const emailService = require('../services/emailService');
+
+const JWT_SECRET = process.env.JWT_SECRET || 'sigma123';
 
 const authController = {
     /**

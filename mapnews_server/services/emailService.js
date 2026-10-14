@@ -1,5 +1,11 @@
 const nodemailer = require('nodemailer');
-const { SMTP_HOST, SMTP_PORT, SMTP_SECURE, SMTP_USER, SMTP_PASS, SMTP_FROM } = require('../config');
+
+const SMTP_HOST   = process.env.SMTP_HOST   || '';
+const SMTP_PORT   = process.env.SMTP_PORT   || 587;
+const SMTP_SECURE = process.env.SMTP_SECURE === 'true' || false;
+const SMTP_USER   = process.env.SMTP_USER   || '';
+const SMTP_PASS   = process.env.SMTP_PASS   || '';
+const SMTP_FROM   = process.env.SMTP_FROM   || '';
 
 let transporter = null;
 

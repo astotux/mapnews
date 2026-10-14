@@ -556,6 +556,8 @@ export class MapManager {
         // Drag / Pan
         this.container.addEventListener('pointerdown', (e) => {
             if (e.target.closest('.custom-map-controls') || e.target.closest('.marker')) return;
+            // Ignore pointer events when two fingers are on screen (pinch)
+            if (this._activeTouches && this._activeTouches >= 2) return;
             this.isDragging = true;
             this.startX = e.clientX - this.panX;
             this.startY = e.clientY - this.panY;
@@ -590,6 +592,65 @@ export class MapManager {
 
             this.updateTransform();
         }, { passive: false });
+
+        // Pinch-to-Zoom (touch)
+        this._activeTouches = 0;
+        this._lastPinchDist = null;
+        this._lastPinchMidX = null;
+        this._lastPinchMidY = null;
+
+        this.container.addEventListener('touchstart', (e) => {
+            this._activeTouches = e.touches.length;
+            if (e.touches.length === 2) {
+                // Stop drag if it was started by first finger
+                this.isDragging = false;
+                const t0 = e.touches[0];
+                const t1 = e.touches[1];
+                this._lastPinchDist = Math.hypot(t1.clientX - t0.clientX, t1.clientY - t0.clientY);
+                const rect = this.container.getBoundingClientRect();
+                this._lastPinchMidX = (t0.clientX + t1.clientX) / 2 - rect.left;
+                this._lastPinchMidY = (t0.clientY + t1.clientY) / 2 - rect.top;
+                e.preventDefault();
+            }
+        }, { passive: false });
+
+        this.container.addEventListener('touchmove', (e) => {
+            if (e.touches.length === 2) {
+                e.preventDefault();
+                const t0 = e.touches[0];
+                const t1 = e.touches[1];
+                const dist = Math.hypot(t1.clientX - t0.clientX, t1.clientY - t0.clientY);
+
+                if (this._lastPinchDist === null) {
+                    this._lastPinchDist = dist;
+                    return;
+                }
+
+                const factor = dist / this._lastPinchDist;
+                const newScale = Math.max(0.4, Math.min(25, this.scale * factor));
+
+                const rect = this.container.getBoundingClientRect();
+                const midX = (t0.clientX + t1.clientX) / 2 - rect.left;
+                const midY = (t0.clientY + t1.clientY) / 2 - rect.top;
+
+                this.panX = midX - (midX - this.panX) * (newScale / this.scale);
+                this.panY = midY - (midY - this.panY) * (newScale / this.scale);
+                this.scale = newScale;
+
+                this._lastPinchDist = dist;
+                this._lastPinchMidX = midX;
+                this._lastPinchMidY = midY;
+
+                this.updateTransform();
+            }
+        }, { passive: false });
+
+        this.container.addEventListener('touchend', (e) => {
+            this._activeTouches = e.touches.length;
+            if (e.touches.length < 2) {
+                this._lastPinchDist = null;
+            }
+        });
 
         window.addEventListener('resize', () => {
             this.autoFitBounds();

@@ -4,11 +4,15 @@ try {
     dns.setServers(['8.8.8.8', '1.1.1.1']);
 } catch (e) { }
 
+require('dotenv').config();
+
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const path = require('path');
-const { PORT, MONGO_URI } = require('./config');
+
+const PORT = process.env.PORT || 8080;
+const MONGO_URI = process.env.MONGO_URI || 'mongodb+srv://admin:E0YEWac4wSDIxC5D@cluster0.eze8dor.mongodb.net/news';
 
 const favoritesRoutes = require('./routes/favorites');
 const authRoutes = require('./routes/auth');
