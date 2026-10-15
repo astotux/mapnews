@@ -131,5 +131,68 @@ async function sendVerificationCode(email, name, code) {
 }
 
 module.exports = {
-    sendVerificationCode
+    sendVerificationCode,
+    sendPasswordReset
 };
+
+async function sendPasswordReset(email, name, resetUrl) {
+    const transport = getTransporter();
+
+    console.log('\n============================================================');
+    console.log('🔑 [MAPNEWS PASSWORD RESET]');
+    console.log(`👤 Получатель: ${name} <${email}>`);
+    console.log(`🔗 Ссылка: ${resetUrl}`);
+    console.log('============================================================\n');
+
+    if (!transport) {
+        return { delivered: false, logged: true };
+    }
+
+    const html = `
+        <!DOCTYPE html><html><head><meta charset="utf-8">
+        <style>
+            body { font-family: Arial, sans-serif; background: #f1f5f9; margin: 0; padding: 24px; }
+            .container { max-width: 540px; margin: 0 auto; background: #fff; border-radius: 18px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; }
+            .header { background: linear-gradient(135deg, #161c26 0%, #1e2534 100%); padding: 34px 28px; text-align: center; }
+            .brand { color: #fff; margin: 0; font-size: 28px; font-weight: 700; }
+            .brand-accent { color: #40C196; }
+            .sub { color: #94a3b8; margin: 8px 0 0; font-size: 14px; }
+            .content { padding: 36px 32px; color: #1e293b; }
+            .greeting { margin: 0 0 16px; font-size: 20px; font-weight: 600; }
+            .text { margin: 0 0 24px; font-size: 15px; line-height: 1.6; color: #475569; }
+            .btn { display: block; width: fit-content; margin: 0 auto 24px; padding: 14px 36px; background: #40C196; color: #fff; text-decoration: none; border-radius: 12px; font-size: 16px; font-weight: 600; }
+            .note { font-size: 13px; color: #94a3b8; line-height: 1.5; }
+            .footer { background: #f8fafc; padding: 20px 32px; text-align: center; font-size: 12px; color: #94a3b8; }
+        </style></head>
+        <body><div class="container">
+            <div class="header">
+                <h1 class="brand">Map<span class="brand-accent">News</span></h1>
+                <p class="sub">Интерактивная карта региональных новостей</p>
+            </div>
+            <div class="content">
+                <h2 class="greeting">Здравствуйте, ${name || 'пользователь'}!</h2>
+                <p class="text">Мы получили запрос на сброс пароля для вашего аккаунта MapNews. Нажмите кнопку ниже чтобы установить новый пароль:</p>
+                <a href="${resetUrl}" class="btn">Сбросить пароль</a>
+                <p class="note">⏱️ Ссылка действует <strong>1 час</strong>.</p>
+                <p class="note" style="margin-top:8px;">Если вы не запрашивали сброс пароля — просто проигнорируйте это письмо.</p>
+            </div>
+            <div class="footer">© ${new Date().getFullYear()} MapNews. Все права защищены.</div>
+        </div></body></html>
+    `;
+
+    try {
+        await transport.sendMail({
+            from: SMTP_FROM || `"MapNews" <${SMTP_USER}>`,
+            replyTo: SMTP_USER,
+            to: email,
+            subject: 'Сброс пароля MapNews',
+            headers: { 'X-Mailer': 'MapNews Mailer', 'X-Priority': '3', 'Precedence': 'transactional' },
+            text: `Здравствуйте, ${name}!\n\nДля сброса пароля перейдите по ссылке:\n${resetUrl}\n\nСсылка действует 1 час.\n\nЕсли вы не запрашивали сброс — проигнорируйте это письмо.`,
+            html
+        });
+        return { delivered: true };
+    } catch (err) {
+        console.error('Ошибка отправки письма сброса пароля:', err.message);
+        return { delivered: false, error: err.message };
+    }
+}

@@ -1,6 +1,7 @@
 const crypto = require('crypto');
 const User = require('../models/userSchema');
 const PendingUser = require('../models/pendingUserSchema');
+const ResetToken = require('../models/resetTokenSchema');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { validatePassword, validateEmail, validateName } = require('../utils/validators');
@@ -276,6 +277,82 @@ const authController = {
             console.error('Ошибка при получении информации о пользователе:', error);
             res.status(500).json({ message: 'Ошибка сервера' });
         }
+    }
+};
+
+    // ── Forgot password: отправить ссылку на почту ──────────────────
+authController.forgotPassword = async (req, res) => {
+    try {
+        const { email } = req.body;
+        if (!email) return res.status(400).json({ message: 'Email обязателен' });
+
+        const cleanEmail = email.trim().toLowerCase();
+        const user = await User.findOne({ email: cleanEmail });
+
+        // Отвечаем одинаково — не раскрываем существует ли email
+        if (!user) {
+            return res.json({ message: 'Если аккаунт с таким email существует, ссылка отправлена' });
+        }
+
+        // Удаляем старый токен если был
+        await ResetToken.deleteOne({ userId: user._id });
+
+        // Генерируем криптостойкий токен
+        const rawToken = crypto.randomBytes(32).toString('hex');
+        const hashedToken = crypto.createHash('sha256').update(rawToken).digest('hex');
+
+        await ResetToken.create({ userId: user._id, token: hashedToken });
+
+        const resetUrl = `${process.env.SITE_URL || 'http://localhost'}/reset-password?token=${rawToken}`;
+
+        await emailService.sendPasswordReset(cleanEmail, user.name, resetUrl);
+
+        res.json({ message: 'Если аккаунт с таким email существует, ссылка отправлена' });
+    } catch (error) {
+        console.error('Ошибка при запросе сброса пароля:', error);
+        res.status(500).json({ message: 'Ошибка сервера' });
+    }
+};
+
+// ── Reset password: установить новый пароль по токену ──────────────
+authController.resetPassword = async (req, res) => {
+    try {
+        const { token, password } = req.body;
+        if (!token || !password) {
+            return res.status(400).json({ message: 'Токен и пароль обязательны' });
+        }
+
+        // Валидация пароля
+        const { validatePassword } = require('../utils/validators');
+        const passCheck = validatePassword(password);
+        if (!passCheck.valid) {
+            return res.status(400).json({ message: passCheck.message });
+        }
+
+        // Хешируем входящий токен и ищем в БД
+        const hashedToken = crypto.createHash('sha256').update(token).digest('hex');
+        const record = await ResetToken.findOne({ token: hashedToken });
+
+        if (!record) {
+            return res.status(400).json({ message: 'Ссылка недействительна или устарела. Запросите новую.' });
+        }
+
+        const user = await User.findById(record.userId);
+        if (!user) {
+            return res.status(400).json({ message: 'Пользователь не найден' });
+        }
+
+        // Обновляем пароль
+        user.password = await bcrypt.hash(password, 10);
+        await user.save();
+
+        // Удаляем токен — одноразовый
+        await ResetToken.deleteOne({ _id: record._id });
+
+        res.json({ message: 'Пароль успешно изменён' });
+    } catch (error) {
+        console.error('Ошибка при сбросе пароля:', error);
+        res.status(500).json({ message: 'Ошибка сервера' });
     }
 };
 

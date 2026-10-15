@@ -12,7 +12,10 @@ router.post('/verify-code', authController.verifyCode);
 router.post('/resend-code', authController.resendCode);
 
 router.post('/login', authController.login);
-
 router.get('/account', authController.account);
+
+// Password reset
+router.post('/forgot-password', authController.forgotPassword);
+router.post('/reset-password', authController.resetPassword);
 
 module.exports = router;
