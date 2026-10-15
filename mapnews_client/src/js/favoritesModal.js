@@ -124,7 +124,7 @@
             return window.allCities;
         }
         try {
-            const res = await fetch('${API_BASE}/api/cities');
+            const res = await fetch(`${API_BASE}/api/cities`);
             if (res.ok) {
                 const data = await res.json();
                 window.citiesList = data;
@@ -140,7 +140,7 @@
             return window.sourcesList;
         }
         try {
-            const res = await fetch('${API_BASE}/api/sources');
+            const res = await fetch(`${API_BASE}/api/sources`);
             if (res.ok) {
                 const data = await res.json();
                 window.sourcesList = data;

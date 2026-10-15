@@ -10,7 +10,7 @@ export class AuthManager {
         if (!this.token) return null;
     
         try {
-            const response = await fetch('${API_BASE}/api/auth/account', {
+            const response = await fetch(`${API_BASE}/api/auth/account`, {
                 headers: {
                     'Authorization': `Bearer ${this.token}`,
                     'Content-Type': 'application/json'
@@ -33,7 +33,7 @@ export class AuthManager {
      */
     async register(email, password, name) {
         try {
-            const response = await fetch('${API_BASE}/api/auth/register', {
+            const response = await fetch(`${API_BASE}/api/auth/register`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ export class AuthManager {
      */
     async verifyCode(email, code) {
         try {
-            const response = await fetch('${API_BASE}/api/auth/verify-code', {
+            const response = await fetch(`${API_BASE}/api/auth/verify-code`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -115,7 +115,7 @@ export class AuthManager {
      */
     async resendCode(email) {
         try {
-            const response = await fetch('${API_BASE}/api/auth/resend-code', {
+            const response = await fetch(`${API_BASE}/api/auth/resend-code`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -149,7 +149,7 @@ export class AuthManager {
 
     async login(email, password) {
         try {
-            const response = await fetch('${API_BASE}/api/auth/login', {
+            const response = await fetch(`${API_BASE}/api/auth/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
