@@ -17,12 +17,6 @@ const News = require('./models/newsSchema');
 const formatDate = require('./utils/formatDateKI');
 const { analyzeNews } = require('./nlpService');
 
-// Новости на сайтах публикуются по московскому времени (UTC+3).
-// Сервер работает в UTC. Эта функция создаёт правильный Date в UTC.
-function moscowToUTC(year, month0based, day, hours, minutes) {
-    return new Date(Date.UTC(year, month0based, day, hours - 3, minutes));
-}
-
 const app = express();
 const PORT = 4444;
 const MONGO_URI = 'mongodb+srv://admin:E0YEWac4wSDIxC5D@cluster0.eze8dor.mongodb.net/news'; // Подключение к MongoDB
@@ -116,7 +110,7 @@ async function parseNewsKI() {
                 if (currentDate && time) {
                     const [hours, minutes] = time.split(':').map(Number);
                     const [day, month, year] = currentDate.split('.').map(Number);
-                    const dateTime = moscowToUTC(year, month - 1, day, hours || 0, minutes || 0);
+                    const dateTime = new Date(year, month - 1, day, hours || 0, minutes || 0);
 
                     const existingNews = await News.findOne({ title });
                     if (!existingNews) {
@@ -161,7 +155,7 @@ async function parseNewsBNK(cityId) {
 
             const [hours, minutes] = time.split(':').map(Number);
             const [day, month, year] = date.split('.').map(Number);
-            const dateTimeObj = moscowToUTC(year, month - 1, day, hours || 0, minutes || 0);
+            const dateTimeObj = new Date(year, month - 1, day, hours || 0, minutes || 0);
 
             if (isNaN(dateTimeObj.getTime())) {
                 console.error('Некорректная дата:', { date, time, dateTimeObj });
@@ -213,10 +207,10 @@ async function parseNewsAIF() {
             const newsUrl = $(element).find('.text_box .box_info a').attr('href');
             const now = new Date();
             const [hours, minutes] = time.split(':').map(Number);
-            const dateTime = moscowToUTC(
-                now.getUTCFullYear(),
-                now.getUTCMonth(),
-                now.getUTCDate(),
+            const dateTime = new Date(
+                now.getFullYear(),
+                now.getMonth(),
+                now.getDate(),
                 hours || 0,
                 minutes || 0
             );
@@ -264,7 +258,7 @@ async function parseNewsKomiOnline() {
             const [dayNum, monthStr] = [day, month];
             const monthNum = getMonthNumber(monthStr);
             const yearNum = parseInt(year);
-            const dateTime = moscowToUTC(yearNum, monthNum - 1, parseInt(dayNum), hours, minutes);
+            const dateTime = new Date(yearNum, monthNum - 1, parseInt(dayNum), hours, minutes);
 
             const newsBlock = $(element).find('.news-item');
             const title = newsBlock.find('.news-title').text().trim();
